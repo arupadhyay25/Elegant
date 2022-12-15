@@ -1,0 +1,151 @@
+.Footer {
+  background-color: rgb(24, 24, 24);
+  color: white;
+}
+.Footer_Main {
+  display: grid;
+  padding: 40px 150px;
+  gap: 50px;
+  background-color: rgb(24, 24, 24);
+}
+
+.Footer_info {
+  font-size: 30px;
+  padding: 7px;
+  background-color: #f2f2f2;
+  color: #666666;
+  border-radius: 20px;
+  margin-right: 43px;
+  margin-left: -17px;
+  margin-top: 3px;
+}
+.Footer_info:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+.pin {
+  color: rgb(173, 11, 11);
+}
+.pin:hover {
+  cursor: pointer;
+}
+.Footer_Two {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 14px;
+  text-align: left;
+  margin: auto;
+  color: white;
+}
+.Footer_Two_columnHead {
+  font-size: 12px;
+  font-weight: bold;
+  color: #968128;
+  margin-left: 7px;
+}
+.Footer_Two_columnChild {
+  padding: 7px;
+}
+.Footer_Two_columnChild:hover {
+  color: #005699;
+  cursor: pointer;
+}
+.Footer_Main2 {
+  font-size: 14px;
+}
+
+span {
+  font-size: 14px;
+  color: #333333;
+}
+
+.Footer_icons {
+  font-size: 20px;
+}
+
+.Footer_Main21 {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 8% 8% 12% 24% 33% 17%;
+  margin-top: 30px;
+  zoom: 0.8;
+  padding-top: 30px;
+}
+.Footer_Main22 {
+  display: grid;
+  width: 50%;
+  margin: auto;
+  margin-top: 5px;
+  zoom: 0.8;
+  grid-template-columns: 40% 60%;
+}
+.Footer_Main2_child {
+  border: 0.5px solid grey;
+  padding: 0px 5px;
+  border-top: none;
+  border-bottom: none;
+  color: #968128;
+}
+.Footer_Main2_child:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.Footer_Main3 {
+  color: #666666;
+  margin-top: 30px;
+  color: #968128;
+}
+hr {
+  color: #f2f2f2;
+  border: 2px solid #968128;
+  background-color: rgb(24, 24, 24);
+}
+.Footer_media_columns {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .Footer_Two {
+    display: none;
+  }
+  .Footer_Main {
+    display: block;
+    padding: 10px 20px;
+  }
+  .Footer_info {
+    margin-left: 10px;
+  }
+  .Footer_Main3 {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  .Footer_Main21,
+  .Footer_Main22 {
+    width: 98%;
+    display: block;
+    text-align: left;
+  }
+  .Footer_Main21 div,
+  .Footer_Main22 div {
+    margin-top: 5px;
+  }
+  .Footer_Main2_child {
+    border: 0px solid grey;
+    padding: 0px 15px;
+    font-size: 13px;
+  }
+  .Footer_media_columns {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgb(24, 24, 24);
+  }
+  .drop-down {
+    background-color: rgb(24, 24, 24);
+  }
+}
