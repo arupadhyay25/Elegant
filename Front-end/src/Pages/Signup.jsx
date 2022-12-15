@@ -25,7 +25,14 @@ function Signup() {
         })
         
     }
-    
+     useEffect(()=>{
+       if(data.name==""||data.email===""||data.number==""||data.password===""){
+         setDis(true)
+       }
+       else{
+        setDis(false)
+       }
+     })
     const handleProceed=()=>{
        
     }

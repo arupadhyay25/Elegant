@@ -1,7 +1,19 @@
 import { Box, Button, FormControl, FormErrorMessage, FormLabel, Image, Input, Menu, MenuButton, MenuItem, MenuList, Portal, Select, Text } from "@chakra-ui/react"
+import { useEffect } from "react"
+import { useState } from "react"
  
 
 function MyForm() {
+  
+  const [dis,setDis]=useState(false)
+  // useEffect(()=>{
+  //   if(data.name==""||data.email===""||data.number==""||data.password===""){
+  //     setDis(true)
+  //   }
+  //   else{
+  //    setDis(false)
+  //   }
+  // })
    return (
     <>
     <Box  width={"60%"} display={"flex"} margin="auto" marginTop={"30px"} border="1px solid gray" borderRadius={"5px"} height={"60px"} alignItems={"center"} justifyContent="space-evenly">
@@ -16,7 +28,7 @@ function MyForm() {
   </Box>
   <Button
             mt={4}
-            
+             disabled={dis}
             colorScheme='teal'
             width={"60%"}
             type='submit'

@@ -10,6 +10,8 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 function LoginPage() {
   const [user,setUser]=useState({})
+  
+
   const handleCallback=(response)=>{
     console.log("Encoded jwt id token"+response.credential)
     let userObj = jwt_decode(response.credential)
