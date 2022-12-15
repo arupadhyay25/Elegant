@@ -32,7 +32,7 @@ function LoginPage() {
   },[])
   return (
       
-       <SimpleGrid columns={[1,1,2,2]}  height="auto" width={"95%"} justifyContent="space-between" margin="auto"   spacing='40px'>
+       <SimpleGrid  columns={[1,1,2,2]}  height="auto" width={"95%"} justifyContent="space-between" margin="auto"   spacing='40px'>
         <Box width={"100%"}  >
            <Box>
               <Text fontSize={"30px"} as={"b"}>
@@ -43,7 +43,7 @@ function LoginPage() {
               <Image src="https://images.bewakoof.com/web/group-19-1617704502.png"/>
               </Box> 
         </Box>
-        <Box width={"100%"}   >
+        <Box   width={"100%"}   >
           <VStack spacing={3}>
           <Text fontSize={"25px"} fontWeight={"medium"} >
              Log in / Sign up
@@ -55,7 +55,7 @@ function LoginPage() {
              <MyForm/>
               
              <Box marginTop={"70px"}>
-             <Button border={"2px solid gray"} width={"60%"} leftIcon={<MdOutlineMailOutline/>}  variant='outline'>
+             <Button display={"flex"} margin="auto" border={"2px solid gray"} width={"60%"} leftIcon={<MdOutlineMailOutline/>}  variant='outline'>
                   CONTINUE WITH EMAIL
             </Button>
             
