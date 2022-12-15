@@ -1,0 +1,112 @@
+/* .navbar-links {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+} */
+
+/* above navbar start */
+.outerMain{
+  background-color: rgb(238,238,238);
+}
+.aboveNavbar{
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: auto;
+  height: 30px; 
+}
+.aboveRBlock{
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid grey; */
+  gap: 20px;
+  font-size: small;
+}
+.aboveRBlock p{
+  margin-top: 5px;
+}
+.aboveLBlock p{
+  margin-top: 5px;
+}
+.aboveLBlock{
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid grey; */
+  gap: 20px;
+  font-size: small;
+}
+.aboveNavbar p:hover{
+  color: rgb(7, 81, 219);
+  cursor: pointer;
+}
+.nav{
+    display: flex;
+    height: 60px;
+    padding: 10px;
+    width: 75%;
+    margin:auto;
+    margin-top: 10px;
+    gap: 10px;
+  /* border: 1px solid rgb(47, 71, 255); */
+}
+.Logo{
+  width: 150px;
+  height: 100px;
+  margin-right: 60px;
+  margin-top: -40px;
+}  
+.searchIp{
+    width: 25%;
+    border-radius: 10px;
+    margin-left: 200px;  
+    height: 40px; 
+    border: 1px solid grey;
+}
+.navIcons{
+  width: 150px;
+  border-radius: 10px;
+  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+}
+.navButtons{
+  background-color: white;
+  font-size: 15px;
+  border: none;
+  color: black;
+  font-weight: lighter;
+  margin-top: -20px;
+  margin-left: 20px;
+  height: 59px;
+  width: auto;
+  
+}
+.navButtons:hover{
+  /* background-color: #525050; */
+  border: 3px solid #febd02;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.userInfo{
+  display: flex;
+  gap: 5px;
+  background-color: #ebe4e4;
+  width: 100%;
+  height: 30px;
+}
+.userInfo a{
+  text-decoration: underline;
+}
+.usermenuList a:hover{
+  color: rgb(7, 81, 219);
+}
+.usermenuList {
+  width: 350px;
+  line-height: 30px;
+
+}
+
+/* Navbar End */
