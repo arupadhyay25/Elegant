@@ -11,7 +11,7 @@ export const Navbar = () => {
       }
   
       const handleMens=()=>{
-      navigate ('/')
+      navigate ('/mens')
       }
       const handleHome=()=>{
           navigate ('/')
@@ -26,7 +26,7 @@ export const Navbar = () => {
           navigate ('/mobile')
       }
   return (
-    <div>
+    <div style={{zoom:"0.7"}}>
       {/* <div className="navbar-links">
         <Link to="/">Navbar</Link>
         <Link to="/login">Login/Signup</Link>
@@ -70,7 +70,7 @@ export const Navbar = () => {
                 
                 
                 <input className={styles.searchIp} type="text" placeholder='     Search by product, category or collection'/>
-                 <div style={{marginLeft:"-50px",marginTop:"10px"}}><i class="fa-solid fa-magnifying-glass"></i></div>
+                 <div style={{marginLeft:"-50px",marginTop:"10px"}}><i className="fa-solid fa-magnifying-glass"></i></div>
                 
                 <div className={styles.navIcons}>
                   <hr />

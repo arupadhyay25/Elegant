@@ -5,7 +5,6 @@ import MyForm from '../Components/MyForm'
 import {MdOutlineMailOutline} from "react-icons/md"
 import {FcGoogle} from "react-icons/fc"
 import {BsFacebook} from "react-icons/bs"
-import jwt_decode  from "jwt-decode"
 import { useEffect } from 'react'
 import { useState } from 'react'
 function LoginPage() {
@@ -14,7 +13,7 @@ function LoginPage() {
 
   const handleCallback=(response)=>{
     console.log("Encoded jwt id token"+response.credential)
-    let userObj = jwt_decode(response.credential)
+    let userObj = {}
     console.log(userObj)
     setUser(userObj)
     // document.getElementById("signinDiv").hidden=true
