@@ -1,32 +1,26 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import { Menu, Button, MenuButton, MenuList, MenuItem,Text } from "@chakra-ui/react";
+import { Menu, Button, MenuButton, MenuList, MenuItem,Text, Input } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 export const Footer = () => {
   const column_1 = [
-    "Help & FAQs",
-    "Shipping",
-    "Returns & Exchanges",
-    "Order Tracking",
-    "Corporate Sales & Gifts",
     "Contact Us",
+    "Track Order",
+    "Return Order",
+    "Cancel Order",
   ];
   const column_2 = [
-    "Sign In or Sign Up",
-    "Order Tracking",
-    "My Auto Refresh",
-    "My Love-It List",
+    "About Us",
+    "We're Hiring",
+    "Terms & Conditions",
+    "Privacy Policy",
+    "Blog",
   ];
   const column_3 = [
-    "About Us",
-    "Careers",
-    "Gift Cards",
-    "Shop by Fragrance",
-    "Product Ingredients",
-    "Get Inspired",
-    "Diversity, Equity & Inclusion",
+    "4.7M People Like this",
+    "1M Followers",
   ];
-  const column_4 = ["Store Locator", "Global Locations"];
+  const column_4 = [];
   const bhai = [
     "Terms Of Use",
     "Privacy Policy",
@@ -57,10 +51,12 @@ export const Footer = () => {
       <hr />
       <div className={styles.Footer_Main}>
         <div className={styles.Footer_Two}>
-          <FooterColumn head="CUSTOMER CARE" arr={column_1} />
-          <FooterColumn head="MY ACCOUNT" arr={column_2} />
-          <FooterColumn head="DISCOVER" arr={column_3} />
-          <FooterColumn head="FIND US" arr={column_4} />
+          <FooterColumn head="CUSTOMER SERVICE" arr={column_1} />
+          <FooterColumn head="COMPANY" arr={column_2} />
+          <FooterColumn head="CONNECT WITH US" arr={column_3} />
+          <FooterColumn head="KEEP UP TO DATE" arr={column_4} />
+          <FooterColumn head="DOWNLOAD THE APP" arr={column_4} />
+          <FooterColumn head="100% SECURE PAYMENT" arr={column_4} />
         </div>
       </div>
       <div className={styles.Footer_media_columns}>
@@ -82,14 +78,18 @@ export const Footer = () => {
           >
             <Text color="white">LET US HELP !</Text>
           </MenuButton>
-          <MenuList color="white">
+          {/* <MenuList color="white">
             <MenuItem bg="#968128">CUSTOMER CARE</MenuItem>
             <MenuItem bg="#968128">MY ACCOUNT</MenuItem>
             <MenuItem bg="#968128">DISCOVER</MenuItem>
             <MenuItem bg="#968128">FIND US</MenuItem>
-          </MenuList>
+            <MenuItem bg="#968128">KEEP UP TO DATE</MenuItem>
+            
+          </MenuList> */}
+          
         </Menu>
       </div>
+      {/* <Input/> */}
       <div className={styles.Footer_Main2}>
         <div>
           <div className={styles.Footer_Main21}>
@@ -111,7 +111,7 @@ export const Footer = () => {
         </div>
 
         <div className={styles.Footer_Main3}>
-          © 2022 Bath & Body Works Direct, Inc. All Rights Reserved
+          {/* © 2022 Bath & Body Works Direct, Inc. All Rights Reserved */}
         </div>
       </div>
     </div>

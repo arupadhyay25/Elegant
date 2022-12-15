@@ -3,9 +3,11 @@
   color: white;
 }
 .Footer_Main {
+  /* border: 1px solid green; */
   display: grid;
-  padding: 40px 150px;
-  gap: 50px;
+  padding: 40px 250px;
+  /* width: 100%; */
+  gap: 80px;
   background-color: rgb(24, 24, 24);
 }
 
@@ -36,14 +38,14 @@
   grid-template-columns: repeat(4, 1fr);
   font-size: 14px;
   text-align: left;
-  margin: auto;
+  /* margin: auto; */
   color: white;
 }
 .Footer_Two_columnHead {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   color: #968128;
-  margin-left: 7px;
+  margin-left: 10px;
 }
 .Footer_Two_columnChild {
   padding: 7px;
