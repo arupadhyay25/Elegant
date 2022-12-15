@@ -1,1 +1,447 @@
- 
+[
+  {
+    "name": "Men's Black Son of White Fang Graphic Printed Oversized T-shirt",
+    "price": 499,
+    "brand": "lewis",
+    "img": "https://images.bewakoof.com/t640/men-s-black-son-of-white-fang-graphic-printed-oversized-t-shirt-559345-1670598122-1.jpg",
+    "id": 1,
+    "category": "Tt-shirts",
+    "rating": 2
+  },
+  {
+    "name": "Men's Black No. 10 Graphic Printed Oversized T-shirt",
+    "price": 499,
+    "brand": "raymond",
+    "img": "https://images.bewakoof.com/t640/men-s-black-no-10-graphic-printed-oversized-t-shirt-561695-1670926459-1.jpg",
+    "id": 2,
+    "category": "sweater",
+    "rating": 4
+  },
+  {
+    "name": "Men's Blue Son of White Fang Graphic Printed Oversized T-shirt",
+    "price": 699,
+    "brand": "bewakoof",
+    "img": "https://images.bewakoof.com/t640/men-s-blue-son-of-white-fang-graphic-printed-oversized-t-shirt-559350-1670598498-1.jpg",
+    "id": 3,
+    "category": "sweater",
+    "rating": 1
+  },
+  {
+    "name": "Men's Black Tribute 07 Graphic Printed Oversized T-shirt",
+    "price": 499,
+    "brand": "bewakoof",
+    "img": "https://images.bewakoof.com/t640/men-s-black-tribute-07-graphic-printed-oversized-t-shirt-559340-1670603750-1.jpg",
+    "id": 4,
+    "category": "sweater",
+    "rating": 3
+  },
+  {
+    "name": "Men's Green What's Up Doc Graphic Printed Oversized T-shirt",
+    "price": 449,
+    "brand": "bewakoof",
+    "img": "https://images.bewakoof.com/t640/men-s-green-what-s-up-doc-graphic-printed-oversized-t-shirt-559367-1670603995-1.jpg",
+    "id": 5,
+    "category": "Tt-shirts",
+    "rating": 2
+  },
+  {
+    "name": "Men's White Ganjutsu Graphic Printed Plus Size T-shirt",
+    "price": 409,
+    "brand": "raymond",
+    "img": "https://images.bewakoof.com/t640/men-white-ganjutsu-printed-plus-size-t-shirt-541067-1663747521-1.jpg",
+    "id": 6,
+    "category": "Tt-shirts",
+    "rating": 3
+  },
+  {
+    "name": "Men's Navy Blue Hope Street Typography Plus Size T-shirt",
+    "price": 409,
+    "brand": "raymond",
+    "img": "https://images.bewakoof.com/t640/men-navy-blue-hope-street-printed-plus-size-t-shirt-541054-1663910235-1.jpg",
+    "id": 7,
+    "category": "Tt-shirts",
+    "rating": 4
+  },
+  {
+    "name": "Men's Oxyfire Hope Street Typography Plus Size T-shirt",
+    "price": 409,
+    "brand": "bewakoof",
+    "img": "https://images.bewakoof.com/t640/men-oxyfire-hope-street-printed-plus-size-t-shirt-541059-1663910092-1.jpg",
+    "id": 8,
+    "category": "sweater",
+    "rating": 2
+  },
+  {
+    "name": "Men's Ice Water Blue Ganjutsu Graphic Printed Plus Size T-shirt",
+    "price": 409,
+    "brand": "lewis",
+    "img": "https://images.bewakoof.com/t640/men-ice-water-blue-ganjutsu-printed-plus-size-t-shirt-541068-1663910553-1.jpg",
+    "id": 9,
+    "category": "sweater",
+    "rating": 1
+  },
+  {
+    "name": "Men's White SO Typography Plus Size T-shirt",
+    "price": 409,
+    "brand": "raymond",
+    "img": "https://images.bewakoof.com/t640/men-white-so-printed-plus-size-t-shirt-541057-1663910198-1.jpg",
+    "id": 10,
+    "category": "Tt-shirts",
+    "rating": 3
+  },
+  {
+    "name": "Men's Savvy Red Polo T-shirt",
+    "price": 439,
+    "brand": "bewakoof",
+    "img": "https://images.bewakoof.com/t640/men-s-savvy-red-solid-polo-t-shirt-492867-1664286835-1.jpg",
+    "id": 11,
+    "category": "sweater",
+    "rating": 4
+  },
+  {
+    "name": "Men's White Dope AF Typography Plus Size T-shirt",
+    "price": 409,
+    "brand": "raymond",
+    "img": "https://images.bewakoof.com/t640/men-white-dope-af-printed-plus-size-t-shirt-541063-1663910015-1.jpg",
+    "id": 12,
+    "category": "sweater",
+    "rating": 4
+  },
+  {
+    "name": "Men's Pink Tribute 07 Graphic Printed Oversized T-shirt",
+    "price": 449,
+    "brand": "bewakoof",
+    "img": "https://images.bewakoof.com/t640/men-s-pink-tribute-07-graphic-printed-oversized-t-shirt-559348-1670604250-1.jpg",
+    "id": 13,
+    "category": "sweater",
+    "rating": 4
+  },
+  {
+    "name": "Men's Black Off Road Adventure T-shirt",
+    "price": 179,
+    "brand": "bewakoof",
+    "img": "https://images.bewakoof.com/t640/men-s-black-off-road-adventure-t-shirt-343090-1655814363-1.jpg",
+    "id": 14,
+    "category": "Tt-shirts",
+    "rating": 2
+  },
+  {
+    "name": "Men's Black & Red Color Block Polo T-shirt",
+    "price": 359,
+    "brand": "lewis",
+    "img": "https://images.bewakoof.com/t640/men-s-black-red-color-block-polo-t-shirt-492878-1663254925-1.jpg",
+    "id": 15,
+    "category": "Tt-shirts",
+    "rating": 3
+  },
+  {
+    "name": "Men's Black Casual Joggers",
+    "price": 899,
+    "brand": "lewis",
+    "img": "https://images.bewakoof.com/t640/jet-black-casual-jogger-pant-293063-1660652156-1.jpg",
+    "id": 16,
+    "category": "sweater",
+    "rating": 4
+  },
+  {
+    "name": "Men's Blue Casual Joggers",
+    "price": 699,
+    "brand": "lewis",
+    "img": "https://images.bewakoof.com/t640/navy-blue-casual-jogger-pant-293071-1655748181-1.jpg",
+    "id": 17,
+    "category": "Tt-shirts",
+    "rating": 4
+  },
+  {
+    "name": "Men's Pink Contrast Sleeve Polo T-shirt",
+    "price": 419,
+    "brand": "lewis",
+    "img": "https://images.bewakoof.com/t640/seashell-pink-contrast-sleeve-polo-329833-1655734337-1.jpg",
+    "id": 18,
+    "category": "sweater",
+    "rating": 3
+  },
+  {
+    "name": "Men's Black and Green Game Over Color Block T-shirt",
+    "price": 257,
+    "brand": "lewis",
+    "img": "https://images.bewakoof.com/t640/men-s-black-and-green-game-over-color-block-t-shirt-459993-1656151621-1.jpg",
+    "id": 19,
+    "category": "Tt-shirts",
+    "rating": 1
+  },
+  {
+    "name": "Men's Black Customizable Oversized Fit T-shirt",
+    "price": 649,
+    "brand": "bewakoof",
+    "img": "https://images.bewakoof.com/t640/men-s-black-customizable-oversized-fit-t-shirt-504365-1667496998-1.jpg",
+    "id": 20,
+    "category": "sweater",
+    "rating": 4
+  },
+  {
+    "name": "Desert Beige Casual Cotton Trouser",
+    "price": 799,
+    "brand": "raymond",
+    "img": "https://images.bewakoof.com/t640/desert-beige-casual-cotton-trouser-330853-1663661915-1.jpg",
+    "id": 21,
+    "category": "sweater",
+    "rating": 3
+  },
+  {
+    "name": "Men's Black Power Star Forever Graphic Printed Oversized T-shirt",
+    "price": 386,
+    "brand": "lewis",
+    "img": "https://images.bewakoof.com/t640/men-s-black-power-star-forever-graphic-printed-oversized-t-shirt-472521-1667382165-1.jpg",
+    "id": 22,
+    "category": "sweater",
+    "rating": 4
+  },
+  {
+    "name": "Dark Olive Casual Cotton Trouser",
+    "price": 799,
+    "brand": "raymond",
+    "img": "https://images.bewakoof.com/t640/dark-olive-casual-cotton-trouser-330854-1663662028-1.jpg",
+    "id": 23,
+    "category": "sweater",
+    "rating": 1
+  },
+  {
+    "name": "Men's Black T-shirt",
+    "price": 214,
+    "brand": "raymond",
+    "img": "https://images.bewakoof.com/t640/men-s-black-relaxed-fit-t-shirt-272304-1655810717-1.jpg",
+    "id": 24,
+    "category": "Tt-shirts",
+    "rating": 1
+  },
+  {
+    "name": "Men's Snazzy Green Joggers",
+    "price": 499,
+    "brand": "bewakoof",
+    "img": "https://images.bewakoof.com/t640/snazzy-green-basic-jogger-435154-1655836195-1.jpg",
+    "id": 25,
+    "category": "Tt-shirts",
+    "rating": 2
+  },
+  {
+    "name": "Men's Grey Avengers Graphic Printed Joggers",
+    "price": 472,
+    "brand": "bewakoof",
+    "img": "https://images.bewakoof.com/t640/men-s-grey-avengers-graphic-printed-joggers-451642-1655836151-1.jpg",
+    "id": 26,
+    "category": "Tt-shirts",
+    "rating": 4
+  },
+  {
+    "name": "Jet Black New Pyjama",
+    "price": 549,
+    "brand": "bewakoof",
+    "img": "https://images.bewakoof.com/t640/jet-black-new-pyjama-308928-1655748462-1.jpg",
+    "id": 27,
+    "category": "sweater",
+    "rating": 2
+  },
+  {
+    "name": "Jet Black Plus Size Casual Shorts",
+    "price": 549,
+    "brand": "raymond",
+    "img": "https://images.bewakoof.com/t640/jet-black-plus-size-casual-shorts-324727-1655748259-1.jpg",
+    "id": 28,
+    "category": "sweater",
+    "rating": 4
+  },
+  {
+    "name": "Navy Blue Plus Size Casual Shorts",
+    "price": 549,
+    "brand": "raymond",
+    "img": "https://images.bewakoof.com/t640/navy-blue-plus-size-casual-shorts-324728-1655748266-1.jpg",
+    "id": 29,
+    "category": "sweater",
+    "rating": 4
+  },
+  {
+    "name": "Men's Purple Agents Typography T-shirt",
+    "price": 349,
+    "brand": "raymond",
+    "img": "https://images.bewakoof.com/t640/men-s-purple-agents-graphic-printed-t-shirt-559334-1670603914-1.jpg",
+    "id": 30,
+    "category": "sweater",
+    "rating": 2
+  },
+  {
+    "name": "Men's Yellow Batman T-shirt",
+    "price": 179,
+    "brand": "raymond",
+    "img": "https://images.bewakoof.com/t640/men-s-yellow-batman-t-shirt-391884-1655810572-1.jpg",
+    "id": 31,
+    "category": "Tt-shirts",
+    "rating": 2
+  },
+  {
+    "name": "Men's Blue Joggers",
+    "price": 899,
+    "brand": "lewis",
+    "img": "https://images.bewakoof.com/t640/navy-blue-zipper-jogger-321139-1655747796-1.jpg",
+    "id": 32,
+    "category": "Tt-shirts",
+    "rating": 2
+  },
+  {
+    "name": "Sage Green Casual Cotton Trouser",
+    "price": 999,
+    "brand": "raymond",
+    "img": "https://images.bewakoof.com/t640/sage-green-casual-cotton-trouser-340543-1663661829-1.jpg",
+    "id": 33,
+    "category": "sweater",
+    "rating": 4
+  },
+  {
+    "name": "Men's Dark Shadow Goofy Hyper Printed Oversized T-shirt",
+    "price": 499,
+    "brand": "raymond",
+    "img": "https://images.bewakoof.com/t640/men-s-dark-shadow-goofy-hyper-printed-oversized-t-shirt-516640-1669209141-1.jpg",
+    "id": 34,
+    "category": "Tt-shirts",
+    "rating": 1
+  },
+  {
+    "name": "Men's Purple Son of White Fang Graphic Printed Oversized T-shirt",
+    "price": 699,
+    "brand": "lewis",
+    "img": "https://images.bewakoof.com/t640/men-s-purple-son-of-white-fang-graphic-printed-oversized-t-shirt-560466-1670598660-1.jpg",
+    "id": 35,
+    "category": "sweater",
+    "rating": 2
+  },
+  {
+    "name": "Men's Red NASA Astronaut Graphic Printed Oversized T-shirt",
+    "price": 449,
+    "brand": "bewakoof",
+    "img": "https://images.bewakoof.com/t640/men-s-red-nasa-astronaut-graphic-printed-oversized-t-shirt-502021-1667496770-1.jpg",
+    "id": 36,
+    "category": "Tt-shirts",
+    "rating": 1
+  },
+  {
+    "name": "Men's Green Egg Puffs T-shirt",
+    "price": 179,
+    "brand": "lewis",
+    "img": "https://images.bewakoof.com/t640/men-s-green-egg-puffs-t-shirt-387796-1655813637-1.jpg",
+    "id": 37,
+    "category": "sweater",
+    "rating": 2
+  },
+  {
+    "name": "Men's Grey Casual Shorts",
+    "price": 549,
+    "brand": "lewis",
+    "img": "https://images.bewakoof.com/t640/moss-green-casual-shorts-293080-1656107949-1.jpg",
+    "id": 38,
+    "category": "sweater",
+    "rating": 4
+  },
+  {
+    "name": "Dark Maroon Casual Shorts",
+    "price": 404,
+    "brand": "lewis",
+    "img": "https://images.bewakoof.com/t640/dark-maroon-casual-shorts-293081-1661433967-1.jpg",
+    "id": 39,
+    "category": "sweater",
+    "rating": 4
+  },
+  {
+    "name": "Jet Black Casual Shorts",
+    "price": 494,
+    "brand": "bewakoof",
+    "img": "https://images.bewakoof.com/t640/jet-black-casual-shorts-330319-1655747935-1.jpg",
+    "id": 40,
+    "category": "Tt-shirts",
+    "rating": 3
+  },
+  {
+    "name": "Men's Brown & Black Color Block T-shirt",
+    "price": 649,
+    "brand": "lewis",
+    "img": "https://images.bewakoof.com/t640/toffee-egret-black-three-panel-half-sleeve-t-shirt-394630-1670935314-1.jpg",
+    "id": 41,
+    "category": "sweater",
+    "rating": 3
+  },
+  {
+    "name": "Men's White No. 10 Graphic Printed T-shirt",
+    "price": 349,
+    "brand": "lewis",
+    "img": "https://images.bewakoof.com/t640/men-s-white-no-10-graphic-printed-t-shirt-561704-1670926420-1.jpg",
+    "id": 42,
+    "category": "Tt-shirts",
+    "rating": 2
+  },
+  {
+    "name": "Navy Blue Casual Shorts",
+    "price": 449,
+    "brand": "raymond",
+    "img": "https://images.bewakoof.com/t640/navy-blue-casual-shorts-330320-1655747710-1.jpg",
+    "id": 43,
+    "category": "sweater",
+    "rating": 2
+  },
+  {
+    "name": "Men's Blue Conquer Typography Oversized T-shirt",
+    "price": 449,
+    "brand": "bewakoof",
+    "img": "https://images.bewakoof.com/t640/men-s-blue-conquer-typography-oversized-t-shirt-519223-1667499300-1.jpg",
+    "id": 44,
+    "category": "sweater",
+    "rating": 3
+  },
+  {
+    "name": "Men's Black Plus Size Oversized T-shirt",
+    "price": 659,
+    "brand": "bewakoof",
+    "img": "https://images.bewakoof.com/t640/men-s-black-plus-size-oversize-fit-solid-t-shirt-504316-1668106623-1.jpg",
+    "id": 45,
+    "category": "sweater",
+    "rating": 1
+  },
+  {
+    "name": "Men's Black Beyond Reality Typography Super Loose T-shirt",
+    "price": 499,
+    "brand": "bewakoof",
+    "id": 46,
+    "category": "sweater",
+    "rating": 4
+  },
+  {
+    "name": "Men's White Wander Geometry Graphic Printed Oversized T-shirt",
+    "price": 494,
+    "brand": "bewakoof",
+    "id": 47,
+    "category": "Tt-shirts",
+    "rating": 4
+  },
+  {
+    "name": "Men's Green Joggers",
+    "price": 749,
+    "brand": "bewakoof",
+    "id": 48,
+    "category": "sweater",
+    "rating": 3
+  },
+  {
+    "name": "Men's Black Moon Knight Marvel Graphic Printed Oversized T-shirt",
+    "price": 549,
+    "brand": "lewis",
+    "id": 49,
+    "category": "Tt-shirts",
+    "rating": 1
+  },
+  {
+    "name": "Men's Green Yeh Dil Maange More T-shirt",
+    "price": 205,
+    "brand": "raymond",
+    "id": 50,
+    "category": "Tt-shirts",
+    "rating": 4
+  }
+]
