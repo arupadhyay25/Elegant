@@ -9,7 +9,7 @@ function App() {
       <br/>
       <Navbar/>
       <br/>
-      <MainRoutes />
+      <MainRoutes/>
       <br/>
       <Footer />
     </div>
