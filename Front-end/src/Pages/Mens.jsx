@@ -1,7 +1,16 @@
 import React from "react";
 import "./Mens.css";
-import { Checkbox, CheckboxGroup, color } from "@chakra-ui/react";
-import { CheckIcon, StarIcon } from "@chakra-ui/icons";
+import {
+  Badge,
+  Button,
+  Checkbox,
+  CheckboxGroup,
+  color,
+  Icon,
+} from "@chakra-ui/react";
+import { StarIcon } from "@chakra-ui/icons";
+
+import { Like } from "../Components/Like";
 
 export const Mens = () => {
   let data = [
@@ -1157,6 +1166,16 @@ export const Mens = () => {
       rating: 5,
     },
   ];
+  const property = {
+    imageUrl: "https://bit.ly/2Z4KKcF",
+    imageAlt: "Rear view of modern home with pool",
+    beds: 3,
+    baths: 2,
+    title: "Modern home in city center in the heart of historic Los Angeles",
+    formattedPrice: "$1,900.00",
+    reviewCount: 34,
+    rating: 4,
+  };
   return (
     <div className="Productpage-main">
       <div className="Productpage-top">
@@ -1166,7 +1185,7 @@ export const Mens = () => {
         <div className="Productpage-body-left">
           <br />
           <h5>PREMIUM</h5>
-          <Checkbox defaultunChecked >Verified</Checkbox>
+          <Checkbox defaultunChecked>Verified</Checkbox>
           <br />
           <br />
           <h5>CATEGORIES</h5>
@@ -1255,16 +1274,30 @@ export const Mens = () => {
             .map((e, i) => (
               <div key={i}>
                 {<img width="100%" src={e.image} />}
+                <div className="Product-brand">
+                  <h5>{e.brand.toUpperCase()}</h5>
+                  <Like />
+                </div>
+                <p className="Product-name">{e.name}</p>
+
+                <p>
+                  <span className="Product-price">₹{e.price}</span>
+                  <span className="Product-dprice">₹{e.discount_price}</span>
+                </p>
+
+                {Array(5)
+                  .fill("")
+                  .map((_, i) => (
+                    <StarIcon
+                      key={i}
+                      color={i < e.rating ? "rgb(255,164,28)" : "grey"}
+                    />
+                  ))}
                 <br />
-                {e.name}
                 <br />
-                {e.category}
-                <br />₹{e.price}
-                <br />
-                {e.rating}
-                <br />₹{e.discount_price}
-                <br />
-                {e.offer}
+                <Button border="none" p={5}>
+                  <h5>{e.offer}</h5>
+                </Button>
                 <br />
               </div>
             ))}
