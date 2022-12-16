@@ -35,23 +35,78 @@ productRoute.post("/", async (req, res) => {
 const productRoute= express.Router();
 
 productRoute.get("/",async(req,res)=>{
-  const params= req.query;
-  const page_no= req.query.page_no;
-  const sort= req.query.sort;
-  const product= req.query.product || "";
-  const limit= req.query.limit || 5;
 
-  try{
-    const products= await productmodel.find(params)
-      .limit(limit)
-      .skip((page_no - 1) * limit)
+  try {
+		const page = parseInt(req.query.page) - 1 || 0;
+		const limit = parseInt(req.query.limit) || 5 ;
+		const search = req.query.search || "";
+		let sort = req.query.sort || "price";
+		let type = req.query.type || "All";
+
+		const typeOptions = [
+			"Casual",
+			"Official",
+			"Party"
+		];
+
+		type === "All"
+			? (type = [...typeOptions])
+			: (type = req.query.type.split(","));
+		req.query.sort ? (sort = req.query.sort.split(",")) : (sort = [sort]);
+
+		let sortBy = {};
+		if (sort[1]) {
+			sortBy[sort[0]] = sort[1];
+		} else {
+			sortBy[sort[0]] = "asc";
+		}
+
+		const products = await productmodel.find({ product: { $regex: search, $options: "i" } })
+			.where("type")
+			.in([...type])
+			.sort(sortBy)
+			.skip(page * limit)
+			.limit(limit);
+
+		const total = await productmodel.countDocuments({
+			type: { $in: [...type] },
+			product: { $regex: search, $options: "i" },
+		});
+
+		const response = {
+			error: false,
+			total,
+			page: page + 1,
+			limit,
+			types: typeOptions,
+			products,
+		};
+
+		res.status(200).json(response);
+	} catch (err) {
+		console.log(err);
+		res.status(500).json({ error: true, message: "Internal Server Error" });
+	}
+
+
+
+  // const params= req.query;
+  // const page_no= req.query.page_no;
+  // const sort= req.query.sort;
+  // const product= req.query.product || "";
+  // const limit= req.query.limit || 5;
+
+  // try{
+  //   const products= await productmodel.find(params)
+  //     .limit(limit)
+  //     .skip((page_no - 1) * limit)
       
-      res.send(products)
-  }
-  catch(err){
-      console.log(err);
-      res.send({"err":"something went wrong"})
-  }
+  //     res.send(products)
+  // }
+  // catch(err){
+  //     console.log(err);
+  //     res.send({"err":"something went wrong"})
+  // }
 })
 
 productRoute.get("/:productID",async(req,res)=>{
