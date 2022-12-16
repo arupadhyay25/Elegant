@@ -27,40 +27,16 @@
 }
 
 .Productpage-body-left {
-<<<<<<< HEAD
   width: 20%;
   height: auto;
 }
 .Productpage-body-right {
   width: 80%;
   height: auto;
-=======
-  width: 25%;
-  height: 100vh;
-  min-height: 200px;
-  overflow: auto;
-  zoom: 0.9;
-  padding-bottom: 580px;
-}
-.Productpage-body-right {
-  width: 80%;
-  height: 1000px;
->>>>>>> 8d577637bf3a874fca87bdebbd3b3e4e15e4cbea
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   text-align: center;
-<<<<<<< HEAD
-=======
-  overflow: scroll;
-}
-.Productpage-body-right-spinner {
-  width: auto;
-  margin: auto;
-  height: auto;
-  text-align: center;
-  zoom: 2;
->>>>>>> 8d577637bf3a874fca87bdebbd3b3e4e15e4cbea
 }
 .Productpage-body-right > div {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
