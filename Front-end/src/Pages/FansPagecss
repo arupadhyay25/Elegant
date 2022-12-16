@@ -1,0 +1,6 @@
+.Productpage-main {
+  /* border: solid red; */
+  width: auto;
+  height: auto;
+  margin: auto;
+}

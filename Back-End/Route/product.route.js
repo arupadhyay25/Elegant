@@ -1,5 +1,26 @@
 const express = require("express");
 const { productmodel } = require("../Model/product.model");
+<<<<<<< HEAD
+const productRoute = express.Router();
+// GET
+productRoute.get("/", async (req, res) => {
+  const paylod = req.body;
+  const alldata = await productmodel.create(paylod);
+  res.send(alldata);
+});
+
+// POST
+productRoute.post("/create/:productID", async (req, res) => {
+  const paylod = req.body;
+  const alldata = await productmodel.create(paylod);
+  res.send(alldata);
+});
+productRoute.post("/", async (req, res) => {
+  const paylod = req.body;
+  await productmodel.create();
+  res.send("Product here!");
+});
+=======
 // const productRoute = express.Router();
 
 // productRoute.post("/", async (req, res) => {
@@ -7,6 +28,7 @@ const { productmodel } = require("../Model/product.model");
 //   await productmodel.create();
 //   res.send("Product here!");
 // });
+>>>>>>> 8d577637bf3a874fca87bdebbd3b3e4e15e4cbea
 
 // module.exports = { productRoute };
 
