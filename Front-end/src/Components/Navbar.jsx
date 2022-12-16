@@ -13,6 +13,7 @@ export const Navbar = () => {
   
   return (
     <div>
+    {/*  <div style={{zoom:"0.7"}}> */}
       {/* <div className="navbar-links">
         <Link to="/">Navbar</Link>
         <Link to="/login">Login/Signup</Link>
@@ -47,15 +48,15 @@ export const Navbar = () => {
                 <div onClick={handleHome} className={styles.logoDiv}>
                 <img className={styles.Logo} src="Images/elegant.png" alt="elegant logo"  />
                 </div>
-                <Box mt={"10px"}>                    
-                  <Link className={styles.navButtons} >MEN</Link>
-                  <Link className={styles.navButtons} >WOMEN</Link>
-                  <Link className={styles.navButtons} >MOBILE COVERS</Link>
+                <Box className={styles.navButtonsDiv} mt={"10px"}>                    
+                  <Link to="/mens" className={styles.navButtons} >MEN</Link>
+                  <Link to="/womens" className={styles.navButtons} >WOMEN</Link>
+                  <Link to="/mobile-cover" className={styles.navButtons} >MOBILE COVERS</Link>
                 </Box>
                 
                 
                 <Input className={styles.searchIp} type="text" placeholder='     Search by product, category or collection'/>
-                 <div style={{marginLeft:"-50px",marginTop:"10px"}}><i class="fa-solid fa-magnifying-glass"></i></div>
+                 <div style={{marginLeft:"-40px",marginTop:"5px"}}><i class="fa-solid fa-magnifying-glass"></i></div>
                 
                 <div className={styles.navIcons}>
                   <hr />
@@ -63,8 +64,8 @@ export const Navbar = () => {
                         
                         Login
                     </div>
-                    <div><i className={styles.eachNavIcon} class="fa-regular fa-heart "></i></div>
-                    <div><i className={styles.eachNavIcon} class="fa-solid fa-cart-shopping "></i></div>
+                    <Link to="/wishlist"><i className={styles.eachNavIcon} class="fa-regular fa-heart "></i></Link>
+                    <Link to="/cart"><i className={styles.eachNavIcon} class="fa-solid fa-cart-shopping "></i></Link>
                     
                 </div>
                 
@@ -72,7 +73,7 @@ export const Navbar = () => {
             </div>
             <hr className={styles.hr} />
         </Box>
-        <Box className={styles.banner}>
+        <Box className={styles.banner} w={{lg:"100%",md:"70%",sm:"500px"}} fontSize={{lg:"22px",md:"16px",sm:"12px"}}>
           <Link to="/live-now">LIVE NOW!</Link>
           <Link to="/mens">MEN</Link>
           <Link to="/womens">WOMEN</Link>

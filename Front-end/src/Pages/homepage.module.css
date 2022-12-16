@@ -3,7 +3,7 @@
     height: 100%;
 }
 .topSaleDiv{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     margin-bottom: 20px;
 }
 .belowBannerImage{
@@ -24,19 +24,24 @@
 }
 .popCatBox{
     margin-top: 20px;
+    width: 95%;
+    margin: auto;
     margin-bottom: 30px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
 }
 .popCatBox2{
     margin-top: 20px;
+    width: 95%;
+    margin: auto;
     margin-bottom: 30px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
 }
 .popCatDiv{
-    border: 1px solid black;
-    width: 100%;
+    /* border: 1px solid black; */
+    /* width: 95%; */
+    margin: auto;
     height: 350px;
 }
 .popCatImage{
@@ -50,6 +55,8 @@
     font-weight: bold;
 }
 .newArrBox{
+    width: 98%;
+    margin: auto;
     margin-top: 20px;
     margin-bottom: 30px;
     /* border: 1px solid blue; */
@@ -62,6 +69,7 @@
 }
 .newArrImage{
     height: 80%;
+    width: 100%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -75,3 +83,58 @@
 .newArrText{
     color: grey;
 }
+@media (min-width:750px) {
+    .topSaleDiv{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+    }
+    .popCatBox{
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: auto;
+    }
+    .popCatBox2{
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: auto;
+    }
+    .belowBannerBox{
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: auto;
+    }
+    .newArrBox{
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: auto;
+    }
+}
+@media (max-width:414px) {
+    .topSaleDiv{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+    }
+    .popCatBox{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+    }
+    .popCatBox2{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+    }
+    .belowBannerBox{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        margin: auto;
+    }
+}
+/* @media (max-width:414px) {
+    .topSaleDiv{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+    }
+    .popCatBox{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+    }
+    .belowBannerBox{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+    } 
+}*/
