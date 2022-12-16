@@ -1,7 +1,7 @@
 import React from "react";
 import { FcLikePlaceholder, FcLike } from "react-icons/fc";
-import { useState } from "react";
 import { Icon } from "@chakra-ui/react";
+import { useState } from "react";
 
 export const Like = () => {
   let [like, setlike] = useState(false);

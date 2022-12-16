@@ -10,6 +10,7 @@ import { Mobilecovers } from "../Pages/Mobilecovers";
 import { Winterwear } from "../Pages/Winterwear";
 import LoginPage from "../Pages/LoginPage";
 import Signup from "../Pages/Signup";
+import { SingleProduct } from "../Pages/SingleProduct";
 
 export const MainRoutes = () => {
   return (
@@ -19,6 +20,7 @@ export const MainRoutes = () => {
       <Route path="/signup" element={<Signup />} />
       <Route path="/live-now" element={<Livenow />} />
       <Route path="/mens" element={<Mens />} />
+      <Route path="/SingleProduct" element={<SingleProduct />} />
       <Route path="/womens" element={<Womens />} />
       <Route path="/accessories" element={<Accessories />} />
       <Route path="/mobile-care" element={<Mobilecovers />} />

@@ -12,6 +12,7 @@ import { StarIcon } from "@chakra-ui/icons";
 
 import { Like } from "../Components/Like";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const Mens = () => {
   let [data, setdata] = useState([]);
@@ -19,6 +20,7 @@ export const Mens = () => {
   let [rating, setrating] = useState([]);
   let [brand, setbrand] = useState([]);
   let [sortby, setsortby] = useState([]);
+  let navigate = useNavigate();
   let handlefilter = (e) => {
     if (filter.includes(e.target.value)) {
       setfilter([]);
@@ -51,6 +53,7 @@ export const Mens = () => {
   };
   let handlesingleproduct = (id) => {
     localStorage.setItem("Productid", JSON.stringify(id));
+    navigate("/SingleProduct");
   };
 
   if (filter.length > 0) {
@@ -315,7 +318,7 @@ export const Mens = () => {
           <div className="Productpage-body-right">
             {data.map((e, i) => (
               <div key={i} onClick={() => handlesingleproduct(e.id)}>
-                {<img width="100%" src={e.image} />}
+                {<img width="100%" src={e.image} alt={e.id} />}
                 <div className="Product-brand">
                   <h5>{e.brand.toUpperCase()}</h5>
                   <Like />
