@@ -10,6 +10,7 @@ import { Mobilecovers } from "../Pages/Mobilecovers";
 import { Winterwear } from "../Pages/Winterwear";
 import LoginPage from "../Pages/LoginPage";
 import Signup from "../Pages/Signup";
+import AdminPage from "../Pages/AdminPage";
 
 export const MainRoutes = () => {
   return (
@@ -17,6 +18,7 @@ export const MainRoutes = () => {
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/adminpage" element={<AdminPage />} />
       <Route path="/live-now" element={<Livenow />} />
       <Route path="/mens" element={<Mens />} />
       <Route path="/womens" element={<Womens />} />
