@@ -12,7 +12,7 @@ export const Navbar = () => {
       }
   
   return (
-    <div style={{zoom:"0.7"}}>
+    <div>
       {/* <div className="navbar-links">
         <Link to="/">Navbar</Link>
         <Link to="/login">Login/Signup</Link>

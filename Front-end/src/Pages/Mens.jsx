@@ -317,7 +317,7 @@ export const Mens = () => {
         {data.length > 0 && (
           <div className="Productpage-body-right">
             {data.map((e, i) => (
-              <div key={i} onClick={() => handlesingleproduct(e.id)}>
+              <div key={i} onClick={() => handlesingleproduct(e)}>
                 {<img width="100%" src={e.image} alt={e.id} />}
                 <div className="Product-brand">
                   <h5>{e.brand.toUpperCase()}</h5>
