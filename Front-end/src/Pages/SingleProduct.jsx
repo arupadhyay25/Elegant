@@ -96,6 +96,10 @@ export const SingleProduct = () => {
           <SizeButton text="4XL" />
           <SizeButton text="5XL" />
         </Stack>
+        <Text fontSize="xs">
+          Garment: Chest (in Inch): 44.0 Front Length (in Inch): 29.75 Sleeve
+          Length (in Inch): 10.0
+        </Text>
         <br />
         <div>
           <Stack w="100%" direction="row" spacing={4}>
