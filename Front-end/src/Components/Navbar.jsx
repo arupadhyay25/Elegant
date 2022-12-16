@@ -59,10 +59,12 @@ export const Navbar = () => {
                 
                 <div className={styles.navIcons}>
                   <hr />
+                    <a href="/login">
                     <div>
                         
                         Login
                     </div>
+                    </a>
                     <div><i className={styles.eachNavIcon} class="fa-regular fa-heart "></i></div>
                     <div><i className={styles.eachNavIcon} class="fa-solid fa-cart-shopping "></i></div>
                     
