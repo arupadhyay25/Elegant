@@ -52,32 +52,42 @@
 }
 .Logo{
   width: 150px;
-  height: 100px;
-  margin-right: 60px;
-  margin-top: -40px;
+  height: 80px;
+  margin-right: 0px;
+  margin-top: -20px;
 }  
 .searchIp{
     width: 25%;
     border-radius: 10px;
-    margin-left: 200px;  
-    height: 40px; 
+    margin-left: 230px;  
+    height: 30px; 
     border: 1px solid grey;
 }
 .navIcons{
-  width: 150px;
+  width: 220px;
   border-radius: 10px;
-  height: 40px;
+  height: 20px;
   display: flex;
   justify-content: space-evenly;
-  margin: auto;
+  /* margin: auto; */
+  margin-left: 30px;
+  /* margin-top: 30px; */
 }
+.hr{
+  color: grey;
+}
+/* .eachNavIcon{
+  width: 40px;
+  height: 40px;
+} */
 .navButtons{
   background-color: white;
+  text-decoration: none;
   font-size: 15px;
   border: none;
   color: black;
-  font-weight: lighter;
-  margin-top: -20px;
+  /* font-weight: lighter; */
+  margin-top: -10px;
   margin-left: 20px;
   height: 59px;
   width: auto;
@@ -89,6 +99,13 @@
   border-top: 0;
   border-left: 0;
   border-right: 0;
+}
+.banner{
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  font-size: 20px;
+  margin-top: 20px;
 }
 .userInfo{
   display: flex;

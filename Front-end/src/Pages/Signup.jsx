@@ -6,7 +6,6 @@ import {MdOutlineMailOutline} from "react-icons/md"
 
 const initialData={
     name:"",
-    number:"",
     email:"",
     password:""
 }
@@ -26,7 +25,7 @@ function Signup() {
         
     }
      useEffect(()=>{
-       if(data.name==""||data.email===""||data.number==""||data.password===""){
+       if(data.name==""||data.email===""||data.password===""){
          setDis(true)
        }
        else{
@@ -59,17 +58,6 @@ function Signup() {
        </Box>
        <Stack marginTop={"40px"} spacing={3}>
         <Input name='name' value={data.name} onChange={handleData} border="0"  borderBottom={"1px solid black"} borderRadius={"0"} placeholder='Name' size='lg' />
-
-        <Box  width={"100%"} display={"flex"} border="0" margin="auto" marginTop={"30px"} borderBottom={"1px solid black"}  height={"60px"} alignItems={"center"} justifyContent="space-evenly">
-    
-            <Select bg={"gray.300"} borderRadius={"0"} height="10%" width={"22%"} placeholder='+91'>
-            <option>+971</option>
-            <option>+1</option>
-            <option>+1</option>
-            </Select>
-            <Input name="number" value={data.number} onChange={handleData} width={"60%"} border={"0"} borderRadius={"0"} fontWeight={"bold"} placeholder="Enter Mobile Number"/>
-            
-        </Box>
 
         <Input name='email' value={data.email} onChange={handleData} border="0" borderBottom={"1px solid black"} borderRadius={"0"} placeholder='Email Id' size='lg' />
 

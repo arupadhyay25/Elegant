@@ -1,0 +1,77 @@
+.topSaleImage{
+    width: 100%;
+    height: 100%;
+}
+.topSaleDiv{
+    border: 1px solid green;
+    margin-bottom: 20px;
+}
+.belowBannerImage{
+    width: 100%;
+    height: 100%;
+}
+.belowBannerBox{
+    /* border: 1px solid black; */
+    display: flex;
+    margin-bottom: 50px;
+    padding: 20px 200px 50px 200px;
+}
+.belowBannerDiv{
+    border: 2px solid black
+}
+.belowBannerDiv Text{
+    font-weight: bold;
+}
+.popCatBox{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 1px solid blue;
+    display: flex;
+}
+.popCatBox2{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 1px solid blue;
+    display: flex;
+}
+.popCatDiv{
+    border: 1px solid black;
+    width: 100%;
+    height: 350px;
+}
+.popCatImage{
+    width: 100%;
+    height: 80%;
+    margin-bottom: 20px;
+}
+.popCatText{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+.newArrBox{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    /* border: 1px solid blue; */
+    display: flex;
+}
+.newArrDiv{
+    height: 450px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.newArrImage{
+    height: 80%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.newArrHeading{
+    margin-top: 20px;
+    /* text-align: center; */
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(97, 96, 96);
+}
+.newArrText{
+    color: grey;
+}
