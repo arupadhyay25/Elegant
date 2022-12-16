@@ -1,0 +1,112 @@
+[
+    {
+        "_id": "639b16aaa55b69ff60736eb9",
+        "product": "T-Shirt",
+        "img": "http://dummyimage.com/109x100.png/dddddd/000000",
+        "brand": "Reebok",
+        "price": 999,
+        "type": "Casual",
+        "category": "Mens",
+        "productID": "1",
+        "__v": 0
+    },
+    {
+        "_id": "639b171ba55b69ff60736ebc",
+        "product": "T-Shirt",
+        "img": "http://dummyimage.com/243x100.png/dddddd/000000",
+        "brand": "Adidas",
+        "price": 899,
+        "type": "Casual",
+        "category": "Mens",
+        "productID": "2",
+        "__v": 0
+    },
+    {
+        "_id": "639b1755a55b69ff60736ebe",
+        "product": "T-Shirt",
+        "img": "http://dummyimage.com/250x100.png/cc0000/ffffff",
+        "brand": "Roadmaster",
+        "price": 799,
+        "type": "Official",
+        "category": "Mens",
+        "productID": "3",
+        "__v": 0
+    },
+    {
+        "_id": "639b1785a55b69ff60736ec0",
+        "product": "T-Shirt",
+        "img": "http://dummyimage.com/210x100.png/ff4444/ffffff",
+        "brand": "Fit",
+        "price": 799,
+        "type": "Party",
+        "category": "Mens",
+        "productID": "4",
+        "__v": 0
+    },
+    {
+        "_id": "639b17c1a55b69ff60736ec2",
+        "product": "Pants",
+        "img": "http://dummyimage.com/151x100.png/5fa2dd/ffffff",
+        "brand": "Expedition",
+        "price": 799,
+        "type": "Party",
+        "category": "Mens",
+        "productID": "5",
+        "__v": 0
+    },
+    {
+        "_id": "639b183fa55b69ff60736ec6",
+        "product": "Shorts",
+        "img": "http://dummyimage.com/224x100.png/cc0000/ffffff",
+        "brand": "CLS-Class",
+        "price": 599,
+        "type": "Casual",
+        "category": "Mens",
+        "productID": "6",
+        "__v": 0
+    },
+    {
+        "_id": "639b1888a55b69ff60736ec9",
+        "product": "Shorts",
+        "img": "http://dummyimage.com/181x100.png/5fa2dd/ffffff",
+        "brand": "Riviera",
+        "price": 499,
+        "type": "Casual",
+        "category": "Mens",
+        "productID": "7",
+        "__v": 0
+    },
+    {
+        "_id": "639b18bea55b69ff60736ecb",
+        "product": "T-Shirt",
+        "img": "http://dummyimage.com/141x100.png/cc0000/ffffff",
+        "brand": "Rodeo",
+        "price": 699,
+        "type": "Casual",
+        "category": "Mens",
+        "productID": "8",
+        "__v": 0
+    },
+    {
+        "_id": "639b18f4a55b69ff60736ecd",
+        "product": "Pants",
+        "img": "http://dummyimage.com/110x100.png/5fa2dd/ffffff",
+        "brand": "Ranger",
+        "price": 799,
+        "type": "Party",
+        "category": "Mens",
+        "productID": "9",
+        "__v": 0
+    },
+    {
+        "_id": "639b1931a55b69ff60736ecf",
+        "product": "T-Shirt",
+        "img": "http://dummyimage.com/193x100.png/5fa2dd/ffffff",
+        "brand": "Celica",
+        "price": 799,
+        "type": "Casual",
+        "category": "Mens",
+        "productID": "10",
+        "__v": 0
+    }
+]
