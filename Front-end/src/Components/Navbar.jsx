@@ -73,11 +73,11 @@ export const Navbar = () => {
             <hr className={styles.hr} />
         </Box>
         <Box className={styles.banner}>
-          <Box>LIVE NOW!</Box>
-          <Box>MEN</Box>
-          <Box>WOMEN</Box>
-          <Box>ACCESSORIES</Box>
-          <Box>WINTERWEAR</Box>
+          <Link to="/live-now">LIVE NOW!</Link>
+          <Link to="/mens">MEN</Link>
+          <Link to="/womens">WOMEN</Link>
+          <Link to="/accessories">ACCESSORIES</Link>
+          <Link to="/winter-wear">WINTERWEAR</Link>
         </Box>
     </div> 
   );
