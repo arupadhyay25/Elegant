@@ -13,7 +13,6 @@ export const Navbar = () => {
   
   return (
     <div>
-    {/*  <div style={{zoom:"0.7"}}> */}
       {/* <div className="navbar-links">
         <Link to="/">Navbar</Link>
         <Link to="/login">Login/Signup</Link>
@@ -60,6 +59,7 @@ export const Navbar = () => {
                 
                 <div className={styles.navIcons}>
                   <hr />
+                    <a href="/login"/>
                     <div>
                         
                         Login
