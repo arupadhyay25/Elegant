@@ -8,6 +8,7 @@ import FansPage from "./Pages/FansPage";
 function App() {
   return (
     <div className="App">
+      
       <br />
       <Navbar />
       <br />

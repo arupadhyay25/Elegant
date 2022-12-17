@@ -1,0 +1,17 @@
+.Card-main {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  gap: 20px;
+  background-color: whitesmoke;
+}
+.Card-right {
+  width: 80%;
+  margin: auto;
+  padding: 0px 20px;
+  text-align: center;
+}
+.Card-right > div {
+  text-align: left;
+}
+
