@@ -14,11 +14,7 @@ import LoginPage from "../Pages/LoginPage";
 import Signup from "../Pages/Signup";
 import { SingleProduct } from "../Pages/SingleProduct";
 import AdminPage from "../Pages/AdminPage";
-<<<<<<< HEAD
-import { Cart } from "../Pages/Cart";
-=======
 import ContactUs from "../Pages/ContactUs";
->>>>>>> b055e6c41e3af32b9af83c5a02b200a7068436a6
 
 export const MainRoutes = () => {
   return (
@@ -26,15 +22,13 @@ export const MainRoutes = () => {
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/profile" element={<ProfilePage />} />
+      <Route path="/addproducts" element={<AddProducts />} />
       <Route path="/adminpage" element={<AdminPage />} />
       <Route path="/live-now" element={<Livenow />} />
       <Route path="/mens" element={<Mens />} />
       <Route path="/SingleProduct" element={<SingleProduct />} />
-<<<<<<< HEAD
-      <Route path="/cart" element={<Cart />} />
-=======
       <Route path="/ContactUs" element={<ContactUs />} />
->>>>>>> b055e6c41e3af32b9af83c5a02b200a7068436a6
       <Route path="/womens" element={<Womens />} />
       <Route path="/accessories" element={<Accessories />} />
       <Route path="/mobile-care" element={<Mobilecovers />} />

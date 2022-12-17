@@ -59,6 +59,7 @@ export const Navbar = () => {
                 
                 <div className={styles.navIcons}>
                   <hr />
+                    <a href="/login"/>
                     <div>
                         
                         Login
