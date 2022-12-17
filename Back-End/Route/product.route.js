@@ -1,36 +1,5 @@
 const express = require("express");
 const { productmodel } = require("../Model/product.model");
-<<<<<<< HEAD
-const productRoute = express.Router();
-// GET
-productRoute.get("/", async (req, res) => {
-  const paylod = req.body;
-  const alldata = await productmodel.create(paylod);
-  res.send(alldata);
-});
-
-// POST
-productRoute.post("/create/:productID", async (req, res) => {
-  const paylod = req.body;
-  const alldata = await productmodel.create(paylod);
-  res.send(alldata);
-});
-productRoute.post("/", async (req, res) => {
-  const paylod = req.body;
-  await productmodel.create();
-  res.send("Product here!");
-});
-=======
-// const productRoute = express.Router();
-
-// productRoute.post("/", async (req, res) => {
-//   const paylod = req.body;
-//   await productmodel.create();
-//   res.send("Product here!");
-// });
->>>>>>> 8d577637bf3a874fca87bdebbd3b3e4e15e4cbea
-
-// module.exports = { productRoute };
 
 const productRoute= express.Router();
 
@@ -87,26 +56,6 @@ productRoute.get("/",async(req,res)=>{
 		console.log(err);
 		res.status(500).json({ error: true, message: "Internal Server Error" });
 	}
-
-
-
-  // const params= req.query;
-  // const page_no= req.query.page_no;
-  // const sort= req.query.sort;
-  // const product= req.query.product || "";
-  // const limit= req.query.limit || 5;
-
-  // try{
-  //   const products= await productmodel.find(params)
-  //     .limit(limit)
-  //     .skip((page_no - 1) * limit)
-      
-  //     res.send(products)
-  // }
-  // catch(err){
-  //     console.log(err);
-  //     res.send({"err":"something went wrong"})
-  // }
 })
 
 productRoute.get("/:productID",async(req,res)=>{
@@ -120,17 +69,7 @@ productRoute.get("/:productID",async(req,res)=>{
     }
 })
 
-// productRoute.get("/find",async(req,res)=>{
-//   const params= req.query;
-//   let data= await productmodel.find();
-//   let ans= data.filter((item)=> item.product.includes(params.product));
-//   try{
-//     res.send(await ans);
-//   }
-//   catch(err){
-//     res.send("Something went wrong !!!");
-//   }
-// });
+
 
 productRoute.post("/create",async(req,res)=>{
     const payload= req.body
