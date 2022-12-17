@@ -8,10 +8,15 @@
   width: 85%;
   height: auto;
   margin: auto;
-  /* border: solid green; */
-  padding: 20px 0px 5px 0px;
-  border-bottom: solid;
-  margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 2%;
+  border-bottom: solid rgb(24, 24, 24);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Productpage-top-sorting {
+  
 }
 .Productpage-body {
   width: 85%;
@@ -22,16 +27,40 @@
 }
 
 .Productpage-body-left {
-    width: 20%;
-    height: auto;
+<<<<<<< HEAD
+  width: 20%;
+  height: auto;
 }
 .Productpage-body-right {
-    width: 80%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    text-align: center;
+  width: 80%;
+  height: auto;
+=======
+  width: 25%;
+  height: 100vh;
+  min-height: 200px;
+  overflow: auto;
+  zoom: 0.9;
+  padding-bottom: 580px;
+}
+.Productpage-body-right {
+  width: 80%;
+  height: 1000px;
+>>>>>>> 8d577637bf3a874fca87bdebbd3b3e4e15e4cbea
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  text-align: center;
+<<<<<<< HEAD
+=======
+  overflow: scroll;
+}
+.Productpage-body-right-spinner {
+  width: auto;
+  margin: auto;
+  height: auto;
+  text-align: center;
+  zoom: 2;
+>>>>>>> 8d577637bf3a874fca87bdebbd3b3e4e15e4cbea
 }
 .Productpage-body-right > div {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -63,9 +92,41 @@
 @media (max-width: 750px) {
   .Productpage-body-right {
     display: grid;
+    width: 50%;
     grid-template-columns: repeat(1, 1fr);
   }
   .Productpage-body-right > div {
-    border: solid;
+    width: 80%;
   }
+  .Productpage-body-left {
+    width: 40%;
+    height: 100vh;
+    min-height: 200px;
+    overflow: auto;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 12%;
+    zoom: 0.8;
+  }
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #181818 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 1px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #181818;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
 }
