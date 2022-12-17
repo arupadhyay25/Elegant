@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Button, Flex, Image, Select, Stack, Text } from "@chakra-ui/react";
 
-export const SinglecartBlock = ({ product }) => {
+export const SinglecartBlock = ({ product, update, setupdate }) => {
   let [quantity, setquantity] = useState(0);
 
   let handlesubQuant = () => {
@@ -11,6 +11,23 @@ export const SinglecartBlock = ({ product }) => {
   let handleaddQuant = () => {
     setquantity(quantity + 1);
   };
+
+  let handledelete = (id) => {
+    const remover = (arr, id) => {
+      const removableObj = arr.findIndex((obj) => obj.id === id);
+
+      if (removableObj > -1) {
+        arr.splice(removableObj, 1);
+      }
+
+      return arr;
+    };
+    let alldata = JSON.parse(localStorage.getItem("cart_data")) || [];
+    remover(alldata, id);
+    localStorage.setItem("cart_data", JSON.stringify(alldata));
+    setupdate(update + 1);
+  };
+
   return (
     <div className="Cart-Product-block">
       <div className="Cart-Product-top">
@@ -46,7 +63,11 @@ export const SinglecartBlock = ({ product }) => {
       </div>
       <div className="Cart-Product-bottom">
         <Flex gap={"5%"} ml="10%">
-          <Button w={"30%"} colorScheme={"teal"}>
+          <Button
+            w={"30%"}
+            colorScheme={"teal"}
+            onClick={() => handledelete(product.id)}
+          >
             Remove
           </Button>
           <Button w={"30%"} colorScheme={"teal"}>

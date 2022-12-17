@@ -22,7 +22,7 @@
 .Cart-Product-right-bottom > div {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
     rgb(209, 213, 219) 0px 0px 0px 1px inset;
-    margin: 10px 0px;
+  margin: 10px 0px;
 }
 .Cart-Product-block {
   width: 100%;
@@ -30,6 +30,7 @@
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
     rgb(209, 213, 219) 0px 0px 0px 1px inset;
   padding-bottom: 10px;
+  zoom: 0.9;
 }
 .Cart-Product-top {
   width: 100%;
@@ -59,6 +60,24 @@
 .Cart-product-inline-other {
   display: flex;
   justify-content: space-between;
+}
+.price-summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 20px;
+  align-items: center;
+}
+.price-summary-end {
+  display: flex;
+  justify-content: center;
+  padding: 2px 20px;
+}
+.cart-end-product {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 @media (max-width: 750px) {

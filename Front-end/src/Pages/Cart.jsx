@@ -1,6 +1,15 @@
 import { CalendarIcon } from "@chakra-ui/icons";
-import { Alert, AlertIcon, Box, Button, Center, Text } from "@chakra-ui/react";
-import React, { useState } from "react";
+import {
+  Alert,
+  AlertIcon,
+  Box,
+  Button,
+  Center,
+  Image,
+  Text,
+} from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import BackdropAdress from "../Components/Modaladdress";
 import { SinglecartBlock } from "../Components/SinglecartBlock";
 import "./Cart.css";
 let styles = {
@@ -11,50 +20,30 @@ let styles = {
 };
 
 export const Cart = () => {
-  let product = [
-    {
-      id: 1,
-      name: "Men's Black Son of White Fang Graphic Printed Oversized T-shirt",
-      image:
-        "https://images.bewakoof.com/t640/men-s-black-son-of-white-fang-graphic-printed-oversized-t-shirt-559345-1670598122-1.jpg",
-      price: 499,
-      discount_price: 1299,
-      offer: "459For TriBe Members",
-      category: "T-shirt",
-      rating: 2,
-      brand: "tyga",
-    },
-    {
-      id: 1,
-      name: "Men's Black Son of White Fang Graphic Printed Oversized T-shirt",
-      image:
-        "https://images.bewakoof.com/t640/men-s-black-son-of-white-fang-graphic-printed-oversized-t-shirt-559345-1670598122-1.jpg",
-      price: 499,
-      discount_price: 1299,
-      offer: "459For TriBe Members",
-      category: "T-shirt",
-      rating: 2,
-      brand: "tyga",
-    },
-  ];
-  // let product = JSON.parse(localStorage.getItem("Productid")) || {
-  //   id: 1,
-  //   name: "Men's Black Son of White Fang Graphic Printed Oversized T-shirt",
-  //   image:
-  //     "https://images.bewakoof.com/t640/men-s-black-son-of-white-fang-graphic-printed-oversized-t-shirt-559345-1670598122-1.jpg",
-  //   price: 499,
-  //   discount_price: 1299,
-  //   offer: "459For TriBe Members",
-  //   category: "T-shirt",
-  //   rating: 2,
-  //   brand: "tyga",
-  // };
+  let product = JSON.parse(localStorage.getItem("cart_data")) || [];
   let [coupons, setcoupons] = useState(0);
+  let [update, setupdate] = useState(0);
+
+  let [mrp, setmrp] = useState(0);
+  let [discount, setdiscount] = useState(0);
   let [total, settotal] = useState(0);
 
   let handlecoupons = () => {
     setcoupons(30);
   };
+  let alldata = JSON.parse(localStorage.getItem("cart_data")) || [];
+
+  useEffect(() => {
+    let sum = 0;
+    let mrp_sum = 0;
+    for (let i = 0; i < product.length; i++) {
+      sum += product[i].price;
+      mrp_sum += product[i].discount_price;
+    }
+    setdiscount(mrp_sum - sum + coupons);
+    settotal(sum - coupons);
+    setmrp(mrp_sum);
+  }, [coupons, alldata]);
 
   return (
     <>
@@ -66,9 +55,19 @@ export const Cart = () => {
               Chakra is going live on August 30th. Get ready!
             </Alert>
           </div>
-          {product.map((e) => (
-            <SinglecartBlock product={e} />
-          ))}
+          {product.length > 0 ? (
+            product.map((e) => (
+              <SinglecartBlock
+                product={e}
+                update={update}
+                setupdate={setupdate}
+              />
+            ))
+          ) : (
+            <>
+              <Image src="./Images/emptycart.gif" alt="emptycart" />
+            </>
+          )}
         </div>
         <div className="Cart-Product-right">
           <div className="Cart-Product-right-top">
@@ -95,7 +94,7 @@ export const Cart = () => {
                   Get Upto 50% OFF
                 </Text>
                 <Button
-                  disabled={coupons > 0}
+                  disabled={product.length == 0}
                   onClick={handlecoupons}
                   size="sm"
                   colorScheme="red"
@@ -106,12 +105,69 @@ export const Cart = () => {
             )}
           </div>
           <div>
-            <Alert status='success' variant='left-accent'>
-              <AlertIcon />
+            <Alert fontSize={"sm"} status="info" variant="left-accent">
               Price Summary
             </Alert>
+            <div className="price-summary">
+              <Text>Total MRP (Incl. of taxes)</Text>
+              <Text>₹{mrp}</Text>
+            </div>
+            <div className="price-summary">
+              <Text>Shipping Charges </Text>
+              <Text color={"green"}>FREE</Text>
+            </div>
+            <div className="price-summary">
+              <Text>Bag Discount </Text>
+              <Text>- ₹{discount}</Text>
+            </div>
+            <div className="price-summary">
+              <Text>Subtotal </Text>
+              <Text>₹{total}</Text>
+            </div>
+            <div className="price-summary-end">
+              <Text
+                color={"green"}
+              >{`You are saving ₹ ${discount} on this order`}</Text>
+            </div>
+          </div>
+          <div>
+            <div className="price-summary">
+              <div>
+                <Text fontSize={"xl"} fontWeight="bold">
+                  Total
+                </Text>
+                <Text fontSize={"xl"} fontWeight="bold">
+                  ₹{total}
+                </Text>
+              </div>
+              <div style={{ width: "50%" }}>
+                <BackdropAdress/>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <br />
+      <Center>
+        <Text>Similar Products</Text>
+      </Center>
+      <div className="cart-end-product">
+        <Image
+          src="https://images.bewakoof.com/t640/stoners-delight-all-over-printed-boxer-235809-1655751256-1.jpg"
+          width={"200px"}
+        />
+        <Image
+          src="https://images.bewakoof.com/t640/men-s-grey-and-black-color-block-track-pant-557937-1670248135-1.JPG"
+          width={"200px"}
+        />
+        <Image
+          src="https://images.bewakoof.com/t640/men-s-sage-green-slim-fit-shirt-560469-1670823107-1.jpg"
+          width={"200px"}
+        />
+        <Image
+          src="https://images.bewakoof.com/t640/men-s-olive-basic-trackpants-459501-1661434183-1.jpg"
+          width={"200px"}
+        />
       </div>
     </>
   );

@@ -1,14 +1,7 @@
-import {
-  AddIcon,
-  ArrowForwardIcon,
-  EmailIcon,
-  MinusIcon,
-  StarIcon,
-} from "@chakra-ui/icons";
+import { AddIcon, MinusIcon, StarIcon } from "@chakra-ui/icons";
 import {
   Accordion,
   AccordionButton,
-  AccordionIcon,
   AccordionItem,
   AccordionPanel,
   Box,
@@ -26,8 +19,6 @@ import {
   Text,
   useDisclosure,
   Center,
-  Alert,
-  AlertIcon,
 } from "@chakra-ui/react";
 import React from "react";
 import { useState } from "react";
@@ -71,18 +62,23 @@ export const SingleProduct = () => {
   let handleaddtocart = () => {
     if (cart) {
       navigate("/cart");
+    } else {
+      let allcart = JSON.parse(localStorage.getItem("cart_data")) || [];
+      let cart_Product = [...allcart, product];
+      localStorage.setItem("cart_data", JSON.stringify(cart_Product));
+
+      toast.success("Added to Cart!", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: 0,
+        theme: "light",
+      });
+      addtocart(!cart);
     }
-    toast.success("Added to Cart!", {
-      position: "top-center",
-      autoClose: 2000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: 0,
-      theme: "light",
-    });
-    addtocart(!cart);
   };
 
   const { isOpen, onOpen, onClose } = useDisclosure();
