@@ -9,13 +9,12 @@ import Offers from "./Pages/Offers";
 function App() {
   return (
     <div className="App">
-      {/* <br />
+      <br />
       <Navbar />
       <br />
       <MainRoutes />
       <br />
-      <Footer /> */}
-      <Offers />
+      <Footer />
     </div>
   );
 }
