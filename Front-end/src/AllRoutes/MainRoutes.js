@@ -15,6 +15,9 @@ import Signup from "../Pages/Signup";
 import { SingleProduct } from "../Pages/SingleProduct";
 import AdminPage from "../Pages/AdminPage";
 import ContactUs from "../Pages/ContactUs";
+import { Cart } from "../Pages/Cart";
+import ProfilePage from "../Pages/ProfilePage";
+import AddProducts from "../Pages/AddProducts";
 
 export const MainRoutes = () => {
   return (
@@ -35,6 +38,7 @@ export const MainRoutes = () => {
       <Route path="/winter-wear" element={<Winterwear />} />
       <Route path="/fanspage" element={<FansPage />} />
       <Route path="/downloaduipage" element={<DownloaduiPage />} />
+      <Route path="/cart" element={<Cart />} />
 
     </Routes>
   );
