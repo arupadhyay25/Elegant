@@ -5,7 +5,9 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 userRouter.get("/", async (req, res) => {
+  console.log("bEY")
   const all = await Usermodel.find();
+  console.log("HEY")
   res.send("user here", all);
 });
 
@@ -39,7 +41,8 @@ userRouter.post("/login", async (req, res) => {
       if (result) {
         const token = jwt.sign(
           { userID: isPresent._id },
-          process.env.SECRET_KEY,
+          // process.env.SECRET_KEY,
+          "top_secret_key",
           { expiresIn: "1h" }
         );
         res.send({ msg: "Login Successfully ! ", token: token });

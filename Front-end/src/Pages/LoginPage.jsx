@@ -18,6 +18,7 @@ function LoginPage() {
     setUser(userObj)
     // document.getElementById("signinDiv").hidden=true
   }
+
   useEffect(()=>{
     /*global google */
      google.accounts.id.initialize({
@@ -29,6 +30,7 @@ function LoginPage() {
       {theme:"outline",size:"large"}
      )
   },[])
+
   return (
       
        <SimpleGrid  columns={[1,1,2,2]}  height="auto" width={"95%"} justifyContent="space-between" margin="auto"   spacing='40px'>

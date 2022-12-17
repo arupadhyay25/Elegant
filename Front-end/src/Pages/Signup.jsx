@@ -1,9 +1,10 @@
-import { Box, Button, Image, Input, InputGroup, InputRightElement, Select, SimpleGrid, Stack, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Image, Input, InputGroup, InputRightElement, Select, SimpleGrid, Stack, Text, useToast, VStack } from '@chakra-ui/react'
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import {MdOutlineMailOutline} from "react-icons/md"
-
+import axios from "axios"
+import { useNavigate } from 'react-router-dom'
 const initialData={
     name:"",
     email:"",
@@ -11,21 +12,24 @@ const initialData={
 }
 function Signup() {
     const [show, setShow] = React.useState(false)
-    const [data,setData]= useState(initialData)
+    const [userData,setUserData]= useState(initialData)
     const [dis,setDis]=useState(false)
+    const [accountCreated,setAccountCreated]=useState(false)
+    const navigate = useNavigate()
+    const toast = useToast()
    
     const handleData=(e)=>{
         const {name,type,value}= e.target
         const val = type ==="number" ? Number(value) : value;
         
-        setData({
-            ...data,
+        setUserData({
+            ...userData,
             [name]:val
         })
         
     }
      useEffect(()=>{
-       if(data.name==""||data.email===""||data.password===""){
+       if(userData.name==""||userData.email===""||userData.password===""){
          setDis(true)
        }
        else{
@@ -33,7 +37,39 @@ function Signup() {
        }
      })
     const handleProceed=()=>{
-       
+      
+      axios({
+        method: 'post',
+        url: 'https://real-blue-kingfisher-gear.cyclic.app/user/signup',
+        data: userData
+      }).then((res) =>{
+        console.log(res.data)
+        if(res.data.msg==="User created successfully"){
+          toast({
+            position: 'top',
+            title: "Account Created !",
+            description: "",
+            status: 'success',
+            duration: 9000,
+            isClosable: true,
+          })
+          navigate("/login")
+             
+        }
+        else if(res.data.msg==="User already exists"){
+          
+          toast({
+                position: 'top',
+                title: "Email already exist",
+                description: "Choose diffrent E-mail",
+                status: 'error',
+                duration: 9000,
+                isClosable: true,
+              })
+              
+        }
+        
+      })
     }
     const handleClick = () => setShow(!show)
   return (
@@ -41,7 +77,7 @@ function Signup() {
     <Box bg={"orange.100"} width={"100%"}  >
        
         <Box >
-          <Image height={"400px"} src="https://images.bewakoof.com/web/desktop-sign-up-banner--1623760676.png"/>
+          <Image  height={"400px"} src="https://images.bewakoof.com/web/desktop-sign-up-banner--1623760676.png"/>
         </Box> 
     </Box>
     <Box  width={"100%"}   >
@@ -57,14 +93,14 @@ function Signup() {
         </Text>
        </Box>
        <Stack marginTop={"40px"} spacing={3}>
-        <Input name='name' value={data.name} onChange={handleData} border="0"  borderBottom={"1px solid black"} borderRadius={"0"} placeholder='Name' size='lg' />
+        <Input name='name' value={userData.name} onChange={handleData} border="0"  borderBottom={"1px solid black"} borderRadius={"0"} placeholder='Name' size='lg' />
 
-        <Input name='email' value={data.email} onChange={handleData} border="0" borderBottom={"1px solid black"} borderRadius={"0"} placeholder='Email Id' size='lg' />
+        <Input name='email' value={userData.email} onChange={handleData} border="0" borderBottom={"1px solid black"} borderRadius={"0"} placeholder='Email Id' size='lg' />
 
         <InputGroup size='lg'>
         <Input
            name='password'
-           value={data.password}
+           value={userData.password}
          borderBottom={"1px solid black"}
             borderRadius={"0"}
             border="0"
@@ -85,7 +121,7 @@ function Signup() {
             disabled={dis}
             mt={4}
             onClick={handleProceed}
-            colorScheme='teal'
+            colorScheme="teal"
             width={"100%"}
             p={7}
             fontSize={"25px"}

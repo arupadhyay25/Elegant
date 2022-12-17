@@ -15,6 +15,9 @@ import Signup from "../Pages/Signup";
 import { SingleProduct } from "../Pages/SingleProduct";
 import AdminPage from "../Pages/AdminPage";
 import ContactUs from "../Pages/ContactUs";
+import AddProducts from "../Pages/AddProducts";
+import ProfilePage from "../Pages/ProfilePage";
+import { Cart } from "../Pages/Cart";
 
 export const MainRoutes = () => {
   return (
@@ -22,6 +25,7 @@ export const MainRoutes = () => {
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/cart" element={<Cart />} />
       <Route path="/profile" element={<ProfilePage />} />
       <Route path="/addproducts" element={<AddProducts />} />
       <Route path="/adminpage" element={<AdminPage />} />
