@@ -82,7 +82,7 @@ export const HomePage = () => {
       
     </Grid>
     
-    <Image src="Images/MiddleSection/shopmenwomen.png" width={{base:"100%",lg:"100%",md:"70%",sm:"40%"}} w={"100%"}/>
+    <Image src="Images/MiddleSection/shopmenwomen.png" width={{base:"100%",lg:"100%",md:"100%",sm:"100%"}} w={"100%"}/>
     
 {/* POPULAR CATEGORIES START */}
 

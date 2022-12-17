@@ -15,6 +15,8 @@ import Signup from "../Pages/Signup";
 import { SingleProduct } from "../Pages/SingleProduct";
 import AdminPage from "../Pages/AdminPage";
 import ContactUs from "../Pages/ContactUs";
+import ProfilePage from "../Pages/ProfilePage";
+import AddProducts from "../Pages/AddProducts";
 
 export const MainRoutes = () => {
   return (

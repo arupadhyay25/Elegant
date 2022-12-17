@@ -62,7 +62,14 @@
 }
 
 @media (min-width:833px) {
-    
+    #rightArrow{
+        top:30rem;
+        right:28rem;
+    }
+    #leftArrow{
+        top:30rem;
+        left:28rem;
+    }
 }
 @media (max-width:832px) {
     .sliderbottom{
