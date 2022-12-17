@@ -1,6 +1,8 @@
 import { Box, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react";
 import { repeat } from "lodash";
 import React from "react";
+import BannerHome from "./BannerHome";
+import BottomBannerHome from "./BottomBannerHome";
 import styles from "./homepage.module.css"
 
 export const HomePage = () => {
@@ -14,9 +16,9 @@ export const HomePage = () => {
   return (
     <Box>
 {/* TOP SLIDESHOW SECTION START */}
-
+<BannerHome/>
     <Grid className={styles.topSaleDiv} 
-    templateColumns="repeat(3,1fr)"
+    // templateColumns="repeat(3,1fr)"
     // templateColumns={{lg:'repeat(3, 1fr)', md:"repeat(2,1fr)", sm:"repeat(2,1fr)"}} 
     gap={"20px"}>
       <GridItem w='100%' h='550' bg='blue.500'> 
@@ -41,41 +43,41 @@ export const HomePage = () => {
     gap={"20px"}>
       
       <GridItem className={styles.belowBannerDiv} w='100%' h='200' bg='blue.500'> 
-        <Image className={styles.belowBannerImage} src="Images/MiddleSection/sale1.webp"/>
-        <Text>Bestsellers</Text>
+        <Image className={styles.belowBannerImage} src="Images/MiddleSection/bb1.webp"/>
+        <Text className={styles.belowBannerText}>Bestsellers</Text>
       </GridItem>
       
       <GridItem className={styles.belowBannerDiv} w='100%' h='200' bg='blue.500'> 
-        <Image className={styles.belowBannerImage} src="Images/MiddleSection/ts2.gif"/>
-        <Text>New Arrivals</Text>
+        <Image className={styles.belowBannerImage} src="Images/MiddleSection/bb2.webp"/>
+        <Text className={styles.belowBannerText}>New Arrivals</Text>
       </GridItem>
       
       <GridItem className={styles.belowBannerDiv} w='100%' h='200' bg='blue.500'> 
-        <Image className={styles.belowBannerImage} src="Images/MiddleSection/ts3.webp"/>
-        <Text>Hot Deals</Text>
+        <Image className={styles.belowBannerImage} src="Images/MiddleSection/bb3.webp"/>
+        <Text className={styles.belowBannerText}>Hot Deals</Text>
       </GridItem>
       <GridItem className={styles.belowBannerDiv} w='100%' h='200' bg='blue.500'> 
-        <Image className={styles.belowBannerImage} src="Images/MiddleSection/sale1.webp"/>
-        <Text>Official Collaborations</Text>
-      </GridItem>
-      
-      <GridItem className={styles.belowBannerDiv} w='100%' h='200' bg='blue.500'> 
-        <Image className={styles.belowBannerImage} src="Images/MiddleSection/ts2.gif"/>
-        <Text>Last sizes left</Text>
+        <Image className={styles.belowBannerImage} src="Images/MiddleSection/bb4.jpg"/>
+        <Text className={styles.belowBannerText}>Official Collaborations</Text>
       </GridItem>
       
       <GridItem className={styles.belowBannerDiv} w='100%' h='200' bg='blue.500'> 
-        <Image className={styles.belowBannerImage} src="Images/MiddleSection/ts3.webp"/>
-        <Text>Plus Sizes</Text>
-      </GridItem>
-      <GridItem className={styles.belowBannerDiv} w='100%' h='200' bg='blue.500'> 
-        <Image className={styles.belowBannerImage} src="Images/MiddleSection/sale1.webp"/>
-        <Text>Customization</Text>
+        <Image className={styles.belowBannerImage} src="Images/MiddleSection/bb5.webp"/>
+        <Text className={styles.belowBannerText}>Last sizes left</Text>
       </GridItem>
       
       <GridItem className={styles.belowBannerDiv} w='100%' h='200' bg='blue.500'> 
-        <Image className={styles.belowBannerImage} src="Images/MiddleSection/ts2.gif"/>
-        <Text>Coupon Offers</Text>
+        <Image className={styles.belowBannerImage} src="Images/MiddleSection/bb6.webp"/>
+        <Text className={styles.belowBannerText}>Plus Sizes</Text>
+      </GridItem>
+      <GridItem className={styles.belowBannerDiv} w='100%' h='200' bg='blue.500'> 
+        <Image className={styles.belowBannerImage} src="Images/MiddleSection/bb7.jpg"/>
+        <Text className={styles.belowBannerText}>Customization</Text>
+      </GridItem>
+      
+      <GridItem className={styles.belowBannerDiv} w='100%' h='200' bg='blue.500'> 
+        <Image className={styles.belowBannerImage} src="Images/MiddleSection/bb3.webp"/>
+        <Text className={styles.belowBannerText}>Coupon Offers</Text>
       </GridItem>
       
     </Grid>
@@ -148,8 +150,9 @@ export const HomePage = () => {
 {/* POPULAR CATEGORIES END */}
 
 {/* NEW ARRIVALS START */}
-    <Heading size={{lg:"24px",md:"20px",sm:"16px"}} textAlign={"center"} mt="10px">NEW ARRIVALS</Heading>
-  
+
+    <Heading mb="20px" size={{lg:"24px",md:"20px",sm:"16px"}} textAlign={"center"} mt="10px">NEW ARRIVALS</Heading>
+  <BottomBannerHome/>
     <Grid className={styles.newArrBox} gap={"30px"}>
       
       <GridItem className={styles.newArrDiv} > 
@@ -180,9 +183,6 @@ export const HomePage = () => {
         </Box>
         
       </GridItem>
-      
-      
-      
       
     </Grid>
   </Box>
