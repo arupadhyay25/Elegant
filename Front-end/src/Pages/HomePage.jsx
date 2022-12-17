@@ -80,7 +80,7 @@ export const HomePage = () => {
       
     </Grid>
     
-    <Image src="Images/MiddleSection/shopmenwomen.png" w={"100%"}/>
+    <Image src="Images/MiddleSection/shopmenwomen.png" width={{base:"100%",lg:"100%",md:"70%",sm:"40%"}} w={"100%"}/>
     
 {/* POPULAR CATEGORIES START */}
 
@@ -150,7 +150,7 @@ export const HomePage = () => {
 {/* NEW ARRIVALS START */}
     <Heading size={{lg:"24px",md:"20px",sm:"16px"}} textAlign={"center"} mt="10px">NEW ARRIVALS</Heading>
   
-    <Grid className={styles.newArrBox} templateColumns={{lg:'repeat(5, 1fr)', md:"repeat(3,1fr)", sm:"repeat(2,1fr)"}} gap={"30px"}>
+    <Grid className={styles.newArrBox} gap={"30px"}>
       
       <GridItem className={styles.newArrDiv} > 
         <Image className={styles.newArrImage} src="Images/MiddleSection/na1.png"/>
