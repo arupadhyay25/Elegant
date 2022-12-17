@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 
 userRouter.get("/", async (req, res) => {
   const all = await Usermodel.find();
-  res.send("user here", all);
+  res.send(all);
 });
 
 userRouter.post("/signup", async (req, res) => {
@@ -42,7 +42,11 @@ userRouter.post("/login", async (req, res) => {
           process.env.SECRET_KEY,
           { expiresIn: "1h" }
         );
-        res.send({ msg: "Login Successfully ! ", token: token });
+        res.send({
+          msg: "Login Successfully ! ",
+          token: token,
+          userID: isPresent._id,
+        });
       } else if (err) {
         res.send({ msg: "Please try again" });
       }
