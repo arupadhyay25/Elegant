@@ -52,16 +52,16 @@
 }
 .Logo{
   width: 150px;
-  height: 80px;
-  margin-right: 0px;
-  margin-top: -20px;
+  height: 50px;
+  margin-right: 10px;
+  margin-top: -10px;
 }  
 .searchIp{
     width: 25%;
     border-radius: 10px;
-    margin-left: 230px;  
-    height: 30px; 
-    border: 1px solid grey;
+    /* margin-left: 230px;   */
+    height: 20px; 
+    /* border: 1px solid purple; */
 }
 .navIcons{
   width: 220px;
@@ -80,6 +80,12 @@
   width: 40px;
   height: 40px;
 } */
+.navButtonsDiv{
+  /* border: 1px solid red; */
+  margin-top: 2px;
+  /* height: auto; */
+  width: 40%;
+}
 .navButtons{
   background-color: white;
   text-decoration: none;
@@ -89,8 +95,9 @@
   /* font-weight: lighter; */
   margin-top: -10px;
   margin-left: 20px;
-  height: 59px;
-  width: auto;
+  height: 80px;
+  width: 200px;
+  /* border: 1px solid red; */
   
 }
 .navButtons:hover{
@@ -125,5 +132,15 @@
   line-height: 30px;
 
 }
+
+/* @media (max-width:750px){
+  .banner{
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(2,1fr);
+    width: 70%;
+    font-size: small;
+  }
+} */
 
 /* Navbar End */

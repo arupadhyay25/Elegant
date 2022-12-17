@@ -9,6 +9,7 @@ import Offers from "./Pages/Offers";
 function App() {
   return (
     <div className="App">
+      
       <br />
       <Navbar />
       <br />

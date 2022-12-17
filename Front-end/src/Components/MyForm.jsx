@@ -27,7 +27,7 @@ function MyForm() {
 
 <Box>
 <FormControl width={"80%"} margin="auto" >
-<FormLabel>Email address</FormLabel>
+<FormLabel>Password</FormLabel>
 <InputGroup  size='lg'>
       <Input
         pr='4.5rem'
