@@ -1,146 +1,96 @@
-/* .navbar-links {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-} */
-
-/* above navbar start */
-.outerMain{
-  background-color: rgb(238,238,238);
+.outerMain {
+  background-color: rgb(238, 238, 238);
+  margin-top: -20px;
 }
-.aboveNavbar{
+.aboveNavbar {
   display: flex;
   justify-content: space-between;
-  width: 75%;
+  width: 80%;
   margin: auto;
-  height: 30px; 
+  height: auto;
+  padding: 10px 0px;
 }
-.aboveRBlock{
+.aboveRBlock {
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid grey; */
   gap: 20px;
   font-size: small;
+  align-items: center;
 }
-.aboveRBlock p{
-  margin-top: 5px;
-}
-.aboveLBlock p{
-  margin-top: 5px;
-}
-.aboveLBlock{
+.aboveLBlock {
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid grey; */
   gap: 20px;
   font-size: small;
+  align-items: center;
 }
-.aboveNavbar p:hover{
+.aboveNavbar p:hover {
   color: rgb(7, 81, 219);
   cursor: pointer;
 }
-.nav{
-    display: flex;
-    height: 60px;
-    padding: 10px;
-    width: 75%;
-    margin:auto;
-    margin-top: 10px;
-    gap: 10px;
-  /* border: 1px solid rgb(47, 71, 255); */
-}
-.Logo{
-  width: 150px;
-  height: 50px;
-  margin-right: 10px;
-  margin-top: -10px;
-}  
-.searchIp{
-    width: 25%;
-    border-radius: 10px;
-    /* margin-left: 230px;   */
-    height: 20px; 
-    /* border: 1px solid purple; */
-}
-.navIcons{
-  width: 220px;
-  border-radius: 10px;
-  height: 20px;
+.nav {
+  width: 80%;
+  height: auto;
+  margin: auto;
   display: flex;
-  justify-content: space-evenly;
-  /* margin: auto; */
-  margin-left: 30px;
-  /* margin-top: 30px; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
-.hr{
+.hr {
   color: grey;
 }
-/* .eachNavIcon{
-  width: 40px;
-  height: 40px;
-} */
-.navButtonsDiv{
-  /* border: 1px solid red; */
-  margin-top: 2px;
-  /* height: auto; */
-  width: 40%;
+.Logo {
+  width: 250px;
 }
-.navButtons{
-  background-color: white;
-  text-decoration: none;
-  font-size: 15px;
-  border: none;
-  color: black;
-  /* font-weight: lighter; */
-  margin-top: -10px;
-  margin-left: 20px;
-  height: 80px;
-  width: 200px;
-  /* border: 1px solid red; */
-  
-}
-.navButtons:hover{
-  /* background-color: #525050; */
-  border: 3px solid #febd02;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-}
-.banner{
+
+.banner {
   display: flex;
   justify-content: center;
-  gap: 80px;
-  font-size: 20px;
-  margin-top: 20px;
+  gap: 60px;
+  padding: 10px 0px 0px 0px;
+  font-size: 25px;
 }
-.userInfo{
+.rightpanel {
+  width: auto;
+  height: auto;
   display: flex;
-  gap: 5px;
-  background-color: #ebe4e4;
-  width: 100%;
-  height: 30px;
-}
-.userInfo a{
-  text-decoration: underline;
-}
-.usermenuList a:hover{
-  color: rgb(7, 81, 219);
-}
-.usermenuList {
-  width: 350px;
-  line-height: 30px;
-
+  gap: 30px;
+  zoom: 0.7;
 }
 
-/* @media (max-width:750px){
-  .banner{
+
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
+  .nav {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    grid-template-columns: repeat(2,1fr);
-    width: 70%;
-    font-size: small;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    zoom: 0.8;
   }
-} */
-
-/* Navbar End */
+  .rightpanel {
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 30px;
+    zoom: 0.6;
+  }
+  .aboveNavbar {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    height: auto;
+    padding: 10px 0px;
+    zoom: 0.6;
+  }
+  .banner {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0px 0px 0px;
+    font-size: 15px;
+  }
+}

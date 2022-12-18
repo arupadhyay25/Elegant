@@ -1,7 +1,9 @@
-.navbar-links {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(24 24 24);
+
+#lblCartCount {
+    font-size: 20px;
+    background: rgb(253,216,54);
+    padding: 0 10px;
+    vertical-align: top;
+    margin-left: -20px; 
+    border-radius: 50%;
 }

@@ -1,8 +1,8 @@
 .Productpage-main {
-  /* border: solid red; */
   width: auto;
   height: auto;
   margin: auto;
+  margin-top: -60px;
 }
 .Productpage-top {
   width: 85%;
@@ -15,9 +15,6 @@
   justify-content: space-between;
   align-items: center;
 }
-/* .Productpage-top-sorting {
-  
-} */
 .Productpage-body {
   width: 85%;
   height: auto;
@@ -32,7 +29,8 @@
 }
 .Productpage-body-right {
   width: 80%;
-  height: auto;
+  height: 700px;
+  overflow: scroll;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
@@ -70,6 +68,8 @@
     display: grid;
     width: 50%;
     grid-template-columns: repeat(1, 1fr);
+    height: 600px;
+    overflow: scroll;
   }
   .Productpage-body-right > div {
     width: 80%;
@@ -83,6 +83,9 @@
     position: sticky;
     top: 12%;
     zoom: 0.8;
+  }
+  .Productpage-top>h1 {
+      zoom: 0.5;
   }
 }
 /* ===== Scrollbar CSS ===== */
