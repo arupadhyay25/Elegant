@@ -18,13 +18,22 @@ import ContactUs from "../Pages/ContactUs";
 import AddProducts from "../Pages/AddProducts";
 import ProfilePage from "../Pages/ProfilePage";
 import { Cart } from "../Pages/Cart";
+import PrivatePage from "../Pages/PrivatePage";
 
 export const MainRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/signup" element={<Signup />} />
+      <Route path="/login" element={
+        <PrivatePage>
+          <LoginPage />
+        </PrivatePage>
+      } />
+      <Route path="/signup" element={
+        <PrivatePage>
+           <Signup />
+        </PrivatePage>
+      } />
       <Route path="/cart" element={<Cart />} />
       <Route path="/profile" element={<ProfilePage />} />
       <Route path="/addproducts" element={<AddProducts />} />

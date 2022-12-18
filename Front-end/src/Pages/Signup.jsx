@@ -1,10 +1,12 @@
-import { Box, Button, Image, Input, InputGroup, InputRightElement, Select, SimpleGrid, Stack, Text, useToast, VStack } from '@chakra-ui/react'
+import { Box, Button, Image, Input, InputGroup, InputRightElement, Select, SimpleGrid, Spinner, Stack, Text, useToast, VStack } from '@chakra-ui/react'
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import {MdOutlineMailOutline} from "react-icons/md"
 import axios from "axios"
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { AuthContext } from '../Context/useContext'
 const initialData={
     name:"",
     email:"",
@@ -14,6 +16,7 @@ function Signup() {
     const [show, setShow] = React.useState(false)
     const [userData,setUserData]= useState(initialData)
     const [dis,setDis]=useState(false)
+    const [isLoading,setisLoading]= useState(false)
     const [accountCreated,setAccountCreated]=useState(false)
     const navigate = useNavigate()
     const toast = useToast()
@@ -28,6 +31,13 @@ function Signup() {
         })
         
     }
+    const loadderFun=()=>{
+      setisLoading(true)
+     setTimeout(()=>{
+      setisLoading(false)
+     },3000)
+     
+  }
      useEffect(()=>{
        if(userData.name==""||userData.email===""||userData.password===""){
          setDis(true)
@@ -37,7 +47,7 @@ function Signup() {
        }
      })
     const handleProceed=()=>{
-      
+      loadderFun()
       axios({
         method: 'post',
         url: 'https://real-blue-kingfisher-gear.cyclic.app/user/signup',
@@ -127,7 +137,13 @@ function Signup() {
             fontSize={"25px"}
             fontWeight={"0"}
           >
-            Proceed
+             {isLoading ?  <Spinner
+            thickness='4px'
+            speed='0.65s'
+            emptyColor='red.200'
+            color='blue.500'
+            size='xl'
+            />:"Procced"}
           </Button>
     </Box>
       

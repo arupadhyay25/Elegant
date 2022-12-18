@@ -7,8 +7,11 @@ import {FcGoogle} from "react-icons/fc"
 import {BsFacebook} from "react-icons/bs"
 import { useEffect } from 'react'
 import { useState } from 'react'
+import { useContext } from 'react'
+import { AuthContext } from '../Context/useContext'
 function LoginPage() {
   const [user,setUser]=useState({})
+ 
   
 
   const handleCallback=(response)=>{
@@ -35,8 +38,8 @@ function LoginPage() {
       
        <SimpleGrid  columns={[1,1,2,2]}  height="auto" width={"95%"} justifyContent="space-between" margin="auto"   spacing='40px'>
         <Box width={"100%"}  >
-           <Box>
-              <Text fontSize={"30px"} as={"b"}>
+           <Box margin={"auto"}>
+              <Text  fontSize={["19px","20px","25px","30px"]} as={"b"}>
               Welcome to the world of ELEGANT!
               </Text>
             </Box>
@@ -49,7 +52,7 @@ function LoginPage() {
           <Text fontSize={"25px"} fontWeight={"medium"} >
              Log in / Sign up
             </Text>
-            <Text fontSize={"20px"} color="gray">
+            <Text fontSize={["12px","15px","16px","20px"]} color="gray">
             for Latest trends, exciting offers and everything Bewakoof!
             </Text>
           </VStack>
@@ -61,15 +64,13 @@ function LoginPage() {
             </Button>
             
             <Stack  width={"60%"}  margin={"auto"} marginTop={"20px"} direction='row' spacing={4} justifyContent={"space-between"}>
-              <Button id='signinDiv' width={"60%"} >
+              <Button id='signinDiv' width={"100%"} >
                 GOOGLE  
               </Button>
-              <Button width={"40%"} leftIcon={<BsFacebook/>} variant='outline'>
-               FACEBOOK
-              </Button>
+              
             </Stack>
                <Box width={"60%"} margin="auto" marginTop={"15px"}>
-               <Text fontSize={"13px"}>
+               <Text fontSize={["9px","10px","11px","13px"]}>
                By creating an account or logging in, you agree with Bewakoof's <Link  fontWeight="medium" color={"teal"} href='https://chakra-ui.com'>
                Terms and Conditions 
                </Link> and  <Link color={"teal"} fontWeight="medium" href='https://chakra-ui.com'>

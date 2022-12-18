@@ -1,19 +1,35 @@
-import { Box, Button, FormControl, FormErrorMessage, FormHelperText, FormLabel, Image, Input, InputGroup, InputRightElement, Menu, MenuButton, MenuItem, MenuList, Portal, Select, Stack, Text, useToast } from "@chakra-ui/react"
-import { useEffect } from "react"
+import { Box, Button, FormControl, FormErrorMessage, FormHelperText, FormLabel, Image, Input, InputGroup, InputRightElement, Menu, MenuButton, MenuItem, MenuList, Portal, Select, Spinner, Stack, Text, useToast } from "@chakra-ui/react"
+import { useContext, useEffect } from "react"
 import { useState } from "react"
 import axios from "axios"
 import { Navigate, useNavigate } from "react-router-dom"
+import { AuthContext } from "../Context/useContext"
 
 function MyForm() {
   const [show, setShow] = useState(false)
   const handleClick = () => setShow(!show)
+  const [isLoading,setisLoading]= useState(false)
   const toast = useToast()
   const navigate = useNavigate()
+  const [loginData,setLoginData]=useState([])
+  const {login,setName,setEmail}= useContext(AuthContext)
   const [useData,setUserData]=useState({
     email:"",
     password:""
 
   })
+  useEffect(()=>{
+    axios.get('https://real-blue-kingfisher-gear.cyclic.app/user')
+    .then(function (response) {
+      setLoginData(response.data)
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
+  },[])
+  
+
+  
   const handleChange=(e)=>{
     const {name,type,value}= e.target
     const val = type ==="number" ? Number(value) : value;
@@ -24,13 +40,21 @@ function MyForm() {
     })
     
   }
+  const loadderFun=()=>{
+    setisLoading(true)
+   setTimeout(()=>{
+    setisLoading(false)
+   },3000)
+   
+}
    const handleSubmit=()=>{
-
+    loadderFun()
 axios({
   method: 'post',
   url: 'https://real-blue-kingfisher-gear.cyclic.app/user/login',
   data: useData
 }).then((res) =>{
+  
    if(res.data.token){
     toast({
       position: 'top',
@@ -40,6 +64,10 @@ axios({
       duration: 9000,
       isClosable: true,
     })
+     const u = loginData.find((item)=>useData.email==item.email)
+     setName(u.name)
+     setEmail(u.email)
+     login()
      navigate("/")
    }
    else{
@@ -102,7 +130,14 @@ axios({
             fontWeight={"0"}
             onClick={handleSubmit}
           >
-            Submit
+             {isLoading ?  <Spinner
+            thickness='4px'
+            speed='0.65s'
+            emptyColor='red.200'
+            color='blue.500'
+            size='xl'
+            />:"Submit"}
+            
           </Button>
   </>
    
