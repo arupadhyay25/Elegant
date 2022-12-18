@@ -1,5 +1,5 @@
 .Cart-Product {
-  width: 80%;
+  width: 60%;
   height: auto;
   margin: auto;
   display: flex;
@@ -7,7 +7,6 @@
 .Cart-Product-left {
   width: 60%;
   height: auto;
-  display: grid;
   gap: 20px;
 }
 .Cart-Product-right {
@@ -31,6 +30,7 @@
     rgb(209, 213, 219) 0px 0px 0px 1px inset;
   padding-bottom: 10px;
   zoom: 0.9;
+  margin: 20px 0px;
 }
 .Cart-Product-top {
   width: 100%;
@@ -100,5 +100,14 @@
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
       rgb(209, 213, 219) 0px 0px 0px 1px inset;
     zoom: 0.7;
+  }
+  .cart-end-product {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
   }
 }

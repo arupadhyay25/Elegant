@@ -1,0 +1,45 @@
+.home-page {
+  width: 95%;
+  margin: auto;
+}
+.home-page-slider {
+  width: 100%;
+}
+.home-page-div3{
+    zoom: 1;
+  }
+
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
+  .home-page {
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    overflow: scroll;
+  }
+  .home-page-div3{
+    zoom: 0.8;
+  }
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #181818 #ffffff;
+  }
+  
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #181818;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+  

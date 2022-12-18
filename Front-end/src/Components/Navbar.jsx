@@ -12,13 +12,12 @@ export const Navbar = () => {
   const handleHome = () => {
     navigate("/");
   };
-  let [product,setproduct] = useState(0)
+  let [product, setproduct] = useState(0);
 
   useEffect(() => {
-    let arr = JSON.parse(localStorage.getItem("cart_data"))
-    setproduct(arr.length)
-  }, [product])
-  
+    let arr = JSON.parse(localStorage.getItem("cart_data"));
+    setproduct(arr.length);
+  }, [product]);
 
   return (
     <>
@@ -51,26 +50,34 @@ export const Navbar = () => {
 
       <Box className={styles.navOuterDiv}>
         <div className={styles.nav}>
-          <div onClick={handleHome} className={styles.logoDiv}>
-            <img
-              className={styles.Logo}
-              src="Images/elegant.png"
-              alt="elegant logo"
-            />
+          <div className={styles.logoDiv}>
+            <Link to={"/"}>
+              <img
+                className={styles.Logo}
+                src="Images/elegant.png"
+                alt="elegant logo"
+              />
+            </Link>
           </div>
 
-          <div onClick={handleHome} className={styles.rightpanel}>
-            <Icon fontSize={"5xl"} as={BsPerson} />
-            <Icon
-              color={"rgb(253,216,54)"}
-              fontSize={"5xl"}
-              as={BsFillHeartFill}
-            />
+          <div className={styles.rightpanel}>
+            <Link to={"login"}>
+              <Icon fontSize={"5xl"} as={BsPerson} />
+            </Link>
+            <Link to={"/cart"}>
+              <Icon
+                color={"rgb(253,216,54)"}
+                fontSize={"5xl"}
+                as={BsFillHeartFill}
+              />
+            </Link>
             <div>
-              <Icon fontSize={"5xl"} as={BsFillBagFill} />
-              <span classNam="badge badge-warning" id="lblCartCount">
-                {product}
-              </span>
+              <Link to="/cart">
+                <Icon fontSize={"5xl"} as={BsFillBagFill} />
+                <span classNam="badge badge-warning" id="lblCartCount">
+                  {product}
+                </span>
+              </Link>
             </div>
           </div>
         </div>

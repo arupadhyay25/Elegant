@@ -5,6 +5,7 @@ import {
   Box,
   Button,
   Center,
+  Icon,
   Image,
   Text,
 } from "@chakra-ui/react";
@@ -12,13 +13,15 @@ import React, { useEffect, useState } from "react";
 import BackdropAdress from "../Components/Modaladdress";
 import { SinglecartBlock } from "../Components/SinglecartBlock";
 import "./Cart.css";
+import { TbBus } from "react-icons/tb";
+import { GiMoneyStack } from "react-icons/gi";
+
 let styles = {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
   padding: "10px 20px",
 };
-
 export const Cart = () => {
   let product = JSON.parse(localStorage.getItem("cart_data")) || [];
   let [coupons, setcoupons] = useState(0);
@@ -51,8 +54,8 @@ export const Cart = () => {
         <div className="Cart-Product-left">
           <div>
             <Alert status="info">
-              <AlertIcon />
-              Chakra is going live on August 30th. Get ready!
+              <Icon as={TbBus} fontSize={"2xl"} />
+              &nbsp; Yay! You get FREE delivery on this order !!
             </Alert>
           </div>
           {product.length > 0 ? (
@@ -71,9 +74,9 @@ export const Cart = () => {
         </div>
         <div className="Cart-Product-right">
           <div className="Cart-Product-right-top">
-            <Alert status="warning" mb="20px">
-              <AlertIcon />
-              Chakra is going live on August 30th. Get ready!
+            <Alert status="warning" justifyContent={"space-between"} mb="20px">
+              Save extra ₹40 with TriBe
+              <Icon fontSize={"2xl"} as={GiMoneyStack} />
             </Alert>
           </div>
           <div className="Cart-Product-right-bottom">
@@ -89,7 +92,7 @@ export const Cart = () => {
             ) : (
               <div style={styles}>
                 <CalendarIcon />
-                <Text fontSize="md"> Apply Coupons</Text>
+                <Text fontSize="sm"> Apply Coupons</Text>
                 <Text color="red" textAlign="center" fontSize="md">
                   Get Upto 50% OFF
                 </Text>
@@ -141,7 +144,7 @@ export const Cart = () => {
                 </Text>
               </div>
               <div style={{ width: "50%" }}>
-                <BackdropAdress/>
+                <BackdropAdress />
               </div>
             </div>
           </div>
