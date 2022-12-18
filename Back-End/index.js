@@ -15,12 +15,12 @@ app.get("/", (req, res) => {
   res.send("WELCOME SERVER RUNNING !!");
 });
 
-app.listen(process.env.PORT, async () => {
+app.listen(8000, async () => {
   try {
     await connect();
     console.log("DB connection established");
   } catch (err) {
     console.log("DB not connected");
   }
-  console.log(`http://localhost:${process.env.PORT}`);
+  console.log(`http://localhost:${8000}`);
 });
