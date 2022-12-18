@@ -94,7 +94,12 @@ export const SingleProduct = () => {
           <Button size="xs">
             <StarIcon color="rgb(255,164,28)" />
             &nbsp;&nbsp;
-            {product.rating > 4 ? product.rating - 0.2 : product.rating + 0.2}
+            {(product.rating > 4
+              ? product.rating - 0.2
+              : product.rating + 0.2 && product.rating < 3
+              ? product.rating + 1.2
+              : false
+            ).toFixed(1)}
           </Button>
           <div className="single-product-inline-price">
             <Text fontWeight="extrabold" fontSize="xl">
@@ -433,7 +438,9 @@ export const SingleProduct = () => {
                     <Text fontSize={"3xl"}>
                       {product.rating > 4
                         ? product.rating - 0.2
-                        : product.rating + 0.2}
+                        : product.rating + 0.2 && product.rating < 3
+                        ? product.rating + 1.2
+                        : false}
                     </Text>
                   </div>
                   <div>
