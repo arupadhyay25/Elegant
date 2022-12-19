@@ -1,6 +1,5 @@
 import { Box, Flex, Image, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
-import { Grid, GridItem } from "@chakra-ui/react";
 const poster1 = [
   {
     img: "https://images.bewakoof.com/banner/women-white-plain--tshirt-1648556042.jpg",

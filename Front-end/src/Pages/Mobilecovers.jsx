@@ -7,12 +7,17 @@ import {
   Select,
   Spinner,
   Stack,
+  Skeleton,
+  Box,
+  SkeletonText,
 } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 
 import { Like } from "../Components/Like";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Footer } from "../Components/Footer";
+import { Navbar } from "../Components/Navbar";
 
 export const Mobilecovers = () => {
   let [data, setdata] = useState([]);
@@ -93,214 +98,274 @@ export const Mobilecovers = () => {
   }, [filter, rating, brand, sortby]);
 
   return (
-    <div className="Productpage-main">
-      <div className="Productpage-top">
-        <h1>Mobile Cover ({data.length+50})</h1>
-        {/* <p>{JSON.stringify(sortby)}</p> */}
-        <div className="Productpage-top-sorting">
-          <Select onChange={handlesort} size="xs" placeholder="Featured">
-            <option value="ascending">Price : low to high</option>
-            <option value="descending">Price : High to low</option>
-            <option value="ratingsort">Avg customer Rating </option>
-            <option value="new">Newest Arrivals</option>
-          </Select>
+    <>
+      <Navbar />
+=
+      <div className="Productpage-main">
+        <div className="Productpage-top">
+          <h1>Mobile Cover ({data.length + 50})</h1>
+          {/* <p>{JSON.stringify(sortby)}</p> */}
+          <div className="Productpage-top-sorting">
+            <Select onChange={handlesort} size="xs" placeholder="Featured">
+              <option value="ascending">Price : low to high</option>
+              <option value="descending">Price : High to low</option>
+              <option value="ratingsort">Avg customer Rating </option>
+              <option value="new">Newest Arrivals</option>
+            </Select>
+          </div>
         </div>
-      </div>
-      <div className="Productpage-body">
-        <div className="Productpage-body-left">
-          <div className="Product-brand">
-            <h5>FILTERS</h5>
-            <Button onClick={resetall} size="xs">
-              ResetAll
-            </Button>
-          </div>
-          <div className="Product-brand">
-            <h5>CATEGORIES</h5>
-          </div>
-          <Checkbox
-            value="T-shirt"
-            isChecked={filter.includes("T-shirt")}
-            onChange={handlefilter}
-          >
-            Samsung
-          </Checkbox>
-          <br />
-          <Checkbox
-            value="shirt"
-            isChecked={!filter.includes("T") && filter.includes("shirt")}
-            onChange={handlefilter}
-          >
-            oneplus
-          </Checkbox>
-          <br />
-          <Checkbox
-            value="hoodies"
-            isChecked={filter.includes("hoodies")}
-            onChange={handlefilter}
-          >
-            google
-          </Checkbox>
-          <br />
-          <Checkbox
-            value="track__pant"
-            isChecked={filter.includes("track__pant")}
-            onChange={handlefilter}
-          >
-            redmi
-          </Checkbox>
-          <br />
+        <div className="Productpage-body">
+          <div className="Productpage-body-left">
+            <div className="Product-brand">
+              <h5>FILTERS</h5>
+              <Button onClick={resetall} size="xs">
+                ResetAll
+              </Button>
+            </div>
+            <div className="Product-brand">
+              <h5>CATEGORIES</h5>
+            </div>
+            <Checkbox
+              value="T-shirt"
+              isChecked={filter.includes("T-shirt")}
+              onChange={handlefilter}
+            >
+              Samsung
+            </Checkbox>
+            <br />
+            <Checkbox
+              value="shirt"
+              isChecked={!filter.includes("T") && filter.includes("shirt")}
+              onChange={handlefilter}
+            >
+              oneplus
+            </Checkbox>
+            <br />
+            <Checkbox
+              value="hoodies"
+              isChecked={filter.includes("hoodies")}
+              onChange={handlefilter}
+            >
+              google
+            </Checkbox>
+            <br />
+            <Checkbox
+              value="track__pant"
+              isChecked={filter.includes("track__pant")}
+              onChange={handlefilter}
+            >
+              redmi
+            </Checkbox>
+            <br />
 
-          <br />
-          <div className="Product-brand">
-            <h5>RATING</h5>
+            <br />
+            <div className="Product-brand">
+              <h5>RATING</h5>
+            </div>
+            <Checkbox
+              value="5"
+              isChecked={rating.includes("5")}
+              onChange={handlerating}
+            >
+              {Array(5)
+                .fill("")
+                .map((_, i) => (
+                  <StarIcon
+                    key={i}
+                    color={i < 5 ? "rgb(255,164,28)" : "grey"}
+                  />
+                ))}
+            </Checkbox>
+            <br />
+            <Checkbox
+              value="4"
+              isChecked={rating.includes("4")}
+              onChange={handlerating}
+            >
+              {Array(5)
+                .fill("")
+                .map((_, i) => (
+                  <StarIcon
+                    key={i}
+                    color={i < 4 ? "rgb(255,164,28)" : "grey"}
+                  />
+                ))}{" "}
+              & up
+            </Checkbox>
+            <br />
+            <Checkbox
+              value="3"
+              isChecked={rating.includes("3")}
+              onChange={handlerating}
+            >
+              {Array(5)
+                .fill("")
+                .map((_, i) => (
+                  <StarIcon
+                    key={i}
+                    color={i < 3 ? "rgb(255,164,28)" : "grey"}
+                  />
+                ))}{" "}
+              & up
+            </Checkbox>
+            <br />
+            <Checkbox
+              value="2"
+              isChecked={rating.includes("2")}
+              onChange={handlerating}
+            >
+              {Array(5)
+                .fill("")
+                .map((_, i) => (
+                  <StarIcon
+                    outline="black"
+                    key={i}
+                    color={i < 2 ? "rgb(255,164,28)" : "grey"}
+                  />
+                ))}{" "}
+              & up
+            </Checkbox>
+            <br />
+            <Checkbox
+              onChange={handlerating}
+              value="1"
+              isChecked={rating.includes("1")}
+            >
+              {Array(5)
+                .fill("")
+                .map((_, i) => (
+                  <StarIcon
+                    key={i}
+                    color={i < 1 ? "rgb(255,164,28)" : "grey"}
+                  />
+                ))}{" "}
+              & up
+            </Checkbox>
+            <br />
+            <br />
+            <div className="Product-brand">
+              <h5>BRAND</h5>
+            </div>
+            <Checkbox
+              value="Bewakoof"
+              isChecked={brand.includes("Bewakoof")}
+              onChange={handlebrand}
+            >
+              Bewakoof
+            </Checkbox>
+            <br />
+            <Checkbox
+              value="Chkokko"
+              isChecked={brand.includes("Chkokko")}
+              onChange={handlebrand}
+            >
+              Chkokko
+            </Checkbox>
+            <br />
+            <Checkbox
+              value="Blue Tyga"
+              isChecked={brand.includes("Blue Tyga")}
+              onChange={handlebrand}
+            >
+              Blue Tyga
+            </Checkbox>
+            <br />
+            <Checkbox
+              value="Snitch"
+              isChecked={brand.includes("Snitch")}
+              onChange={handlebrand}
+            >
+              Snitch
+            </Checkbox>
+            <br />
           </div>
-          <Checkbox
-            value="5"
-            isChecked={rating.includes("5")}
-            onChange={handlerating}
-          >
-            {Array(5)
-              .fill("")
-              .map((_, i) => (
-                <StarIcon key={i} color={i < 5 ? "rgb(255,164,28)" : "grey"} />
-              ))}
-          </Checkbox>
-          <br />
-          <Checkbox
-            value="4"
-            isChecked={rating.includes("4")}
-            onChange={handlerating}
-          >
-            {Array(5)
-              .fill("")
-              .map((_, i) => (
-                <StarIcon key={i} color={i < 4 ? "rgb(255,164,28)" : "grey"} />
-              ))}{" "}
-            & up
-          </Checkbox>
-          <br />
-          <Checkbox
-            value="3"
-            isChecked={rating.includes("3")}
-            onChange={handlerating}
-          >
-            {Array(5)
-              .fill("")
-              .map((_, i) => (
-                <StarIcon key={i} color={i < 3 ? "rgb(255,164,28)" : "grey"} />
-              ))}{" "}
-            & up
-          </Checkbox>
-          <br />
-          <Checkbox
-            value="2"
-            isChecked={rating.includes("2")}
-            onChange={handlerating}
-          >
-            {Array(5)
-              .fill("")
-              .map((_, i) => (
-                <StarIcon
-                  outline="black"
-                  key={i}
-                  color={i < 2 ? "rgb(255,164,28)" : "grey"}
-                />
-              ))}{" "}
-            & up
-          </Checkbox>
-          <br />
-          <Checkbox
-            onChange={handlerating}
-            value="1"
-            isChecked={rating.includes("1")}
-          >
-            {Array(5)
-              .fill("")
-              .map((_, i) => (
-                <StarIcon key={i} color={i < 1 ? "rgb(255,164,28)" : "grey"} />
-              ))}{" "}
-            & up
-          </Checkbox>
-          <br />
-          <br />
-          <div className="Product-brand">
-            <h5>BRAND</h5>
-          </div>
-          <Checkbox
-            value="Bewakoof"
-            isChecked={brand.includes("Bewakoof")}
-            onChange={handlebrand}
-          >
-            Bewakoof
-          </Checkbox>
-          <br />
-          <Checkbox
-            value="Chkokko"
-            isChecked={brand.includes("Chkokko")}
-            onChange={handlebrand}
-          >
-            Chkokko
-          </Checkbox>
-          <br />
-          <Checkbox
-            value="Blue Tyga"
-            isChecked={brand.includes("Blue Tyga")}
-            onChange={handlebrand}
-          >
-            Blue Tyga
-          </Checkbox>
-          <br />
-          <Checkbox
-            value="Snitch"
-            isChecked={brand.includes("Snitch")}
-            onChange={handlebrand}
-          >
-            Snitch
-          </Checkbox>
-          <br />
-        </div>
-        {data.length > 0 && (
-          <div className="Productpage-body-right">
-            {data.map((e, i) => (
-              <div key={i} onClick={() => handlesingleproduct(e)}>
-                {<img width="100%" src={e.image} alt={e.id} />}
-                <div className="Product-brand">
-                  <h5>{e.brand.toUpperCase()}</h5>
-                  <Like />
+          {data.length > 0 ? (
+            <div className="Productpage-body-right">
+              {data.map((e, i) => (
+                <div key={i} onClick={() => handlesingleproduct(e)}>
+                  {<img width="100%" src={e.image} alt={e.id} />}
+                  <div className="Product-brand">
+                    <h5>{e.brand.toUpperCase()}</h5>
+                    <Like />
+                  </div>
+                  <p className="Product-name">{e.name}</p>
+
+                  <p>
+                    <span className="Product-price">₹{e.price}</span>
+                    <span className="Product-dprice">₹{e.discount_price}</span>
+                  </p>
+
+                  {Array(5)
+                    .fill("")
+                    .map((_, i) => (
+                      <StarIcon
+                        key={i}
+                        color={i < e.rating ? "rgb(255,164,28)" : "grey"}
+                      />
+                    ))}
+                  <br />
+                  <br />
+                  <Button border="none" p={5}>
+                    <h5>{e.offer}</h5>
+                  </Button>
+                  <br />
                 </div>
-                <p className="Product-name">{e.name}</p>
-
-                <p>
-                  <span className="Product-price">₹{e.price}</span>
-                  <span className="Product-dprice">₹{e.discount_price}</span>
-                </p>
-
-                {Array(5)
-                  .fill("")
-                  .map((_, i) => (
-                    <StarIcon
-                      key={i}
-                      color={i < e.rating ? "rgb(255,164,28)" : "grey"}
+              ))}
+            </div>
+          ) : (
+            Array(3)
+              .fill("")
+              .map((_, i) => (
+                <div key={i}>
+                  <Box padding="5" boxShadow="lg" bg="white">
+                    <Skeleton width="270px">
+                      <div>contents wrapped</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                    </Skeleton>
+                    <SkeletonText
+                      mt="4"
+                      noOfLines={4}
+                      spacing="2"
+                      skeletonHeight="10"
                     />
-                  ))}
-                <br />
-                <br />
-                <Button border="none" p={5}>
-                  <h5>{e.offer}</h5>
-                </Button>
-                <br />
-              </div>
-            ))}
-          </div>
-        )}
-        {data.length == 0 && (
-          <div className="Productpage-body-right-spinner">
-            <Stack direction="row" spacing={4}>
-              <Spinner size="xl" />
-            </Stack>
-          </div>
-        )}
+                  </Box>
+                  <br />
+                  <Box padding="5" boxShadow="lg" bg="white">
+                    <Skeleton width="270px">
+                      <div>contents wrapped</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                      <div>won't be visible</div>
+                    </Skeleton>
+                    <SkeletonText
+                      mt="4"
+                      noOfLines={4}
+                      spacing="2"
+                      skeletonHeight="10"
+                    />
+                  </Box>
+                </div>
+              ))
+          )}
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };

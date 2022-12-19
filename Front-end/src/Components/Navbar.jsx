@@ -6,9 +6,13 @@ import "./Navbar.css";
 
 import { BsFillBagFill, BsFillHeartFill, BsPerson } from "react-icons/bs";
 import { useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../Context/useContext";
 
 export const Navbar = () => {
   const navigate = useNavigate();
+  let { cartQuantity, setcartQuantity } = useContext(AuthContext);
+
   const handleHome = () => {
     navigate("/");
   };
@@ -16,7 +20,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     let arr = JSON.parse(localStorage.getItem("cart_data"));
-    setproduct(arr.length);
+    setcartQuantity(arr.length);
   }, [product]);
 
   return (
@@ -25,13 +29,19 @@ export const Navbar = () => {
         <div className={styles.aboveNavbar}>
           <div className={styles.aboveRBlock}>
             <div>
-              <p>Offers</p>
+              <Link to={"offers"}>
+                <p>Offers</p>
+              </Link>
             </div>
             <div>
-              <p>Fanbook</p>
+              <Link to={"fanpage"}>
+                <p>Fanbook</p>
+              </Link>
             </div>
             <div>
-              <p>Download App</p>
+              <Link to={"/downloaduipage"}>
+                <p>Download App</p>
+              </Link>
             </div>
             <div>
               <p>Tribe Membership</p>
@@ -39,7 +49,9 @@ export const Navbar = () => {
           </div>
           <div className={styles.aboveLBlock}>
             <div>
-              <p>Contact Us</p>
+              <Link to={"/ContactUs"}>
+                <p>Contact Us</p>
+              </Link>
             </div>
             <div>
               <p>Track Order</p>
@@ -74,8 +86,8 @@ export const Navbar = () => {
             <div>
               <Link to="/cart">
                 <Icon fontSize={"5xl"} as={BsFillBagFill} />
-                <span classNam="badge badge-warning" id="lblCartCount">
-                  {product}
+                <span className="badge badge-warning" id="lblCartCount">
+                  {cartQuantity}
                 </span>
               </Link>
             </div>
@@ -90,7 +102,7 @@ export const Navbar = () => {
       >
         <Link to="/mens">MEN</Link>
         <Link to="/womens">WOMEN</Link>
-        <Link to="/mobile-care">Mobile Covers</Link>
+        <Link to="/mobile-care">ACCESSORIES</Link>
         <Link to="/winter-wear">WINTERWEAR</Link>
       </Box>
     </>

@@ -20,7 +20,7 @@ import {
   useDisclosure,
   Center,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import "./SingleProduct.css";
 import { FcLikePlaceholder, FcLike } from "react-icons/fc";
@@ -34,12 +34,15 @@ import { BsCash } from "react-icons/bs";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import { Navbar } from "../Components/Navbar";
+import { AuthContext } from "../Context/useContext";
 
 export const SingleProduct = () => {
   let [like, setlike] = useState(false);
   let [dimension, setdimension] = useState(false);
   let [cart, addtocart] = useState(false);
   let navigate = useNavigate();
+  let { cartQuantity, setcartQuantity } = useContext(AuthContext);
 
   let product = JSON.parse(localStorage.getItem("Productid")) || {
     id: 1,
@@ -77,6 +80,8 @@ export const SingleProduct = () => {
         progress: 0,
         theme: "light",
       });
+      let arr = JSON.parse(localStorage.getItem("cart_data"));
+      setcartQuantity(arr.length);
       addtocart(!cart);
     }
   };
@@ -84,6 +89,8 @@ export const SingleProduct = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
+      <Navbar />
+      <br />
       <div className="Single-Product">
         <div className="Single-Product-left">
           <Image src={product.image} alt={product.name} w="80%" m="auto" />
@@ -436,11 +443,12 @@ export const SingleProduct = () => {
                 <div className="single-product-inline-end">
                   <div>
                     <Text fontSize={"3xl"}>
-                      {product.rating > 4
+                      {(product.rating > 4
                         ? product.rating - 0.2
                         : product.rating + 0.2 && product.rating < 3
                         ? product.rating + 1.2
-                        : false}
+                        : false
+                      ).toFixed(1)}
                     </Text>
                   </div>
                   <div>

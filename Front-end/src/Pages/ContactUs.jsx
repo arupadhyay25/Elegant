@@ -3,8 +3,8 @@ import { Tabs, TabList, Tab, TabPanels, TabPanel, Box, Input, VStack, SimpleGrid
 
 const ContactUs = () => {
   return (
-    <>
-    <Box  m="10px" w={{base:"none",lg:"100%"}}>
+    <div style={{width:"70%",margin:"auto"}}>
+    <Box   m="10px" w={{base:"none",lg:"100%"}}>
         <VStack
           w={"100%"}
           textAlign="center"
@@ -710,7 +710,7 @@ const ContactUs = () => {
     </TabPanels>
 </Tabs>
 
-    </>
+    </div>
   )
 }
 

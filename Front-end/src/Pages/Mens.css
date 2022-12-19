@@ -2,7 +2,7 @@
   width: auto;
   height: auto;
   margin: auto;
-  margin-top: -4%;
+  margin-top: -2%;
 }
 .Productpage-top {
   width: 85%;
@@ -62,8 +62,8 @@
   text-decoration: line-through;
   margin-left: 10px;
 }
-.Productpage-top>h1 {
- zoom: 0.7;
+.Productpage-top > h1 {
+  zoom: 0.7;
 }
 
 @media (max-width: 750px) {
@@ -87,8 +87,8 @@
     top: 12%;
     zoom: 0.8;
   }
-  .Productpage-top>h1 {
-      zoom: 0.5;
+  .Productpage-top > h1 {
+    zoom: 0.5;
   }
 }
 /* ===== Scrollbar CSS ===== */

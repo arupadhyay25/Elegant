@@ -3,7 +3,9 @@ import { Center, Heading, Text } from "@chakra-ui/layout";
 import React from "react";
 import AutoPlay from "./SimpleSlider";
 import AutoPlay2 from "./SimpleSlider2";
-import "./homepage.css"
+import "./homepage.css";
+import { Footer } from "../Components/Footer";
+import { Navbar } from "../Components/Navbar";
 
 export const HomePage = () => {
   let categories = [
@@ -59,49 +61,54 @@ export const HomePage = () => {
     },
   ];
   return (
-    <div className="home-page">
-      <div className="home-page-slider">
-        <AutoPlay />
+    <>
+      <Navbar />
+      <br />
+      <div className="home-page">
+        <div className="home-page-slider">
+          <AutoPlay />
+        </div>
+        <div className="home-page-div2">
+          <Center>
+            <Image
+              src="https://images.bewakoof.com/uploads/grid/app/Desktop-Strip-6-1669115141.jpg"
+              alt="band"
+            />
+          </Center>
+        </div>
+        <div>
+          <AutoPlay2 />
+        </div>
+        <div className="home-page-div2">
+          <Center>
+            <Image
+              src="https://images.bewakoof.com/uploads/grid/app/Desktop-Split-Men-1670938024.jpg"
+              alt="band"
+            />
+            <Image
+              src="https://images.bewakoof.com/uploads/grid/app/Desktop-Split-Women-1670938025.jpg"
+              alt="band"
+            />
+          </Center>
+        </div>
+        <div className="home-page-div3">
+          <br />
+          <Center>
+            <Text fontSize="3xl">CATEGORIES TO BAG</Text>
+          </Center>
+          <Center>
+            {categories.map((e) => (
+              <Image width={"90%"} src={e.image} />
+            ))}
+          </Center>
+          <Center>
+            {categories2.map((e) => (
+              <Image width={"90%"} src={e.image} />
+            ))}
+          </Center>
+        </div>
       </div>
-      <div className="home-page-div2">
-        <Center>
-          <Image
-            src="https://images.bewakoof.com/uploads/grid/app/Desktop-Strip-6-1669115141.jpg"
-            alt="band"
-          />
-        </Center>
-      </div>
-      <div>
-        <AutoPlay2 />
-      </div>
-      <div className="home-page-div2">
-        <Center>
-          <Image
-            src="https://images.bewakoof.com/uploads/grid/app/Desktop-Split-Men-1670938024.jpg"
-            alt="band"
-          />
-          <Image
-            src="https://images.bewakoof.com/uploads/grid/app/Desktop-Split-Women-1670938025.jpg"
-            alt="band"
-          />
-        </Center>
-      </div>
-      <div className="home-page-div3">
-        <br />
-        <Center>
-          <Text fontSize="3xl">CATEGORIES TO BAG</Text>
-        </Center>
-        <Center>
-          {categories.map((e) => (
-            <Image width={"90%"} src={e.image} />
-          ))}
-        </Center>
-        <Center>
-          {categories2.map((e) => (
-            <Image width={"90%"} src={e.image} />
-          ))}
-        </Center>
-      </div>
-    </div>
+      <Footer />
+    </>
   );
 };

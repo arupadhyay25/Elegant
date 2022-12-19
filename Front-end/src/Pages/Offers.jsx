@@ -10,7 +10,6 @@ function Offers(props) {
         py="1%"
         justifyContent={"center"}
         alignItems={"center"}
-        border="1px solid red"
       >
         <Text
           fontSize={"48px"}

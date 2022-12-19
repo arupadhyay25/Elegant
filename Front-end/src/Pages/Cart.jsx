@@ -9,12 +9,15 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import BackdropAdress from "../Components/Modaladdress";
 import { SinglecartBlock } from "../Components/SinglecartBlock";
 import "./Cart.css";
 import { TbBus } from "react-icons/tb";
 import { GiMoneyStack } from "react-icons/gi";
+import { Footer } from "../Components/Footer";
+import { Navbar } from "../Components/Navbar";
+import { AuthContext } from "../Context/useContext";
 
 let styles = {
   display: "flex",
@@ -24,6 +27,7 @@ let styles = {
 };
 export const Cart = () => {
   let product = JSON.parse(localStorage.getItem("cart_data")) || [];
+  let { cartQuantity, setcartQuantity } = useContext(AuthContext);
   let [coupons, setcoupons] = useState(0);
   let [update, setupdate] = useState(0);
 
@@ -46,10 +50,13 @@ export const Cart = () => {
     setdiscount(mrp_sum - sum + coupons);
     settotal(sum - coupons);
     setmrp(mrp_sum);
+    let arr = JSON.parse(localStorage.getItem("cart_data"));
+    setcartQuantity(arr.length);
   }, [coupons, alldata]);
 
   return (
     <>
+      <Navbar />
       <div className="Cart-Product">
         <div className="Cart-Product-left">
           <div>
@@ -172,6 +179,7 @@ export const Cart = () => {
           width={"200px"}
         />
       </div>
+      <Footer />
     </>
   );
 };
