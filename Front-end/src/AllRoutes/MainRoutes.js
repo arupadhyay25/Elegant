@@ -18,6 +18,7 @@ import ContactUs from "../Pages/ContactUs";
 import { Cart } from "../Pages/Cart";
 import ProfilePage from "../Pages/ProfilePage";
 import AddProducts from "../Pages/AddProducts";
+import PrivatePage from "../Pages/PrivatePage";
 
 export const MainRoutes = () => {
   return (
