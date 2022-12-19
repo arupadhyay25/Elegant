@@ -50,7 +50,7 @@ export const Cart = () => {
     setdiscount(mrp_sum - sum + coupons);
     settotal(sum - coupons);
     setmrp(mrp_sum);
-    let arr = JSON.parse(localStorage.getItem("cart_data"));
+    let arr = JSON.parse(localStorage.getItem("cart_data"))||[];
     setcartQuantity(arr.length);
   }, [coupons, alldata]);
 
