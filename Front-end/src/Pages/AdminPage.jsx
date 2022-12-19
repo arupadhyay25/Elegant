@@ -27,10 +27,6 @@ function AdminPage() {
   ];
   let categoryListCount = [96, 65, 71, 35];
 
-  useEffect(() => {
-    let arr = JSON.parse(localStorage.getItem("cart_data"));
-    setproduct(arr.length);
-  }, [product]);
 
   return (
     <>

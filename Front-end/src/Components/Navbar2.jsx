@@ -10,7 +10,7 @@ export const Navbar2 = () => {
   let [product, setproduct] = useState(0);
 
   useEffect(() => {
-    let arr = JSON.parse(localStorage.getItem("cart_data"));
+    let arr = JSON.parse(localStorage.getItem("cart_data")) || [];
     setproduct(arr.length);
   }, [product]);
 

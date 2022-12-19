@@ -19,7 +19,7 @@ export const Navbar = () => {
   let [product, setproduct] = useState(0);
 
   useEffect(() => {
-    let arr = JSON.parse(localStorage.getItem("cart_data"));
+    let arr = JSON.parse(localStorage.getItem("cart_data")) || [];
     setcartQuantity(arr.length);
   }, [product]);
 
@@ -73,7 +73,7 @@ export const Navbar = () => {
           </div>
 
           <div className={styles.rightpanel}>
-            <Link to={"login"}>
+            <Link to={"/login"}>
               <Icon fontSize={"5xl"} as={BsPerson} />
             </Link>
             <Link to={"/cart"}>
