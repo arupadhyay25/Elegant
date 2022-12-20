@@ -464,8 +464,7 @@ export const SingleProduct = () => {
                   </Button>
                 </div>
               </div>
-              <Image src="./Images/pr.JPG" />
-            </div>
+           </div>
           </div>
         </div>
       </div>
