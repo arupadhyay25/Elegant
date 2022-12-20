@@ -40,8 +40,10 @@ Elegant is an E-Commerce website that sells Fashion and Accessories products ..
 
 ## Snapshots 📷
 
-![mobile (3)](https://user-images.githubusercontent.com/105644684/208607446-4e012601-47fd-427a-a935-7306b6c86b43.png)
-![mobile (1)](https://user-images.githubusercontent.com/105644684/208607472-697d4744-ab2c-449e-ab75-63b4fbcac9a3.png)
+<img src="https://user-images.githubusercontent.com/105644684/208607446-4e012601-47fd-427a-a935-7306b6c86b43.png" width="50%"/>
+
+<img src="https://user-images.githubusercontent.com/105644684/208607472-697d4744-ab2c-449e-ab75-63b4fbcac9a3.png" width="50%"/>
+
 
 ### End Notes 📑
 
