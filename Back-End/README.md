@@ -1,7 +1,3 @@
-# itchy-nation-5605
-
-API Endpoints : http://localhost:9200/product?page=1&limit=15&type=Casual&sort=price,desc&search=shorts
-
 # Welcome to server of Elegant.com
 ## tech stacks & libraries:
 ### Nodejs
@@ -14,9 +10,14 @@ API Endpoints : http://localhost:9200/product?page=1&limit=15&type=Casual&sort=p
 ### Product- GET / POST / PATCH / DELETE
 ## { Sortings : price, new arrival etc }
 ## { Filtering : brand, categories , arrival etc }
+
+API Endpoints : https://real-blue-kingfisher-gear.cyclic.app/
+
 ## Collaborative work:
 ### Rohit Prajapat
 ### Abhishek Upadhayay
 ### Nilesh Singh Chauhan
 ### Bharath Kumar
 ### Ankit Yadav
+
+
