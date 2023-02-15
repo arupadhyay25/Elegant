@@ -88,7 +88,7 @@ export const Womens = () => {
   useEffect(() => {
     if (data.length == 0) {
       axios
-        .get("https://kind-teal-swordfish-slip.cyclic.app/womens")
+        .get("https://funny-shrug-eel.cyclic.app/womens")
         .then((r) => setdata(r.data))
         .catch((e) => console.log(e));
     }
