@@ -91,7 +91,7 @@ export const Mobilecovers = () => {
   useEffect(() => {
     if (data.length == 0) {
       axios
-        .get("https://kind-teal-swordfish-slip.cyclic.app/mobilecover")
+        .get("https://funny-shrug-eel.cyclic.app/mobilecover")
         .then((r) => setdata(r.data))
         .catch((e) => console.log(e));
     }
