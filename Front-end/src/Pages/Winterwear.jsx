@@ -90,7 +90,7 @@ export const Winterwear = () => {
   useEffect(() => {
     if (data.length == 0) {
       axios
-        .get("https://kind-teal-swordfish-slip.cyclic.app/mens")
+        .get("https://funny-shrug-eel.cyclic.app/mens")
         .then((r) => setdata(r.data.filter((e) => e.category == "hoodies")))
         .catch((e) => console.log(e));
     }
